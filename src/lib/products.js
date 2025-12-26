@@ -1,129 +1,188 @@
-import { ObjectId } from "mongodb";
-import clientPromise from "./mongodb";
+import db from "./db";
 
-let client;
-let db;
-let products;
-
-async function init() {
-  if (db) return;
-  try {
-    client = await clientPromise;
-    db = client.db("imageprocessing"); 
-    products = db.collection("products");
-  } catch (error) {
-    console.error("Failed to connect to database:", error);
-    throw new Error("Failed to connect to database");
-  }
-}
-
-// 1. GET ALL PRODUCTS (READ)
+// 1. GET ALL PRODUCTS (Home Page)
 export async function getProducts() {
   try {
-    await init();
-    if (!products) return [];
+    const query = "SELECT * FROM products ORDER BY created_at DESC";
+    const [rows] = await db.execute(query);
 
-    const data = await products.find({}).toArray();
+    return rows.map((p) => {
+      //  FIX START: Parse images JSON safely here
+      let gallery = [];
+      try {
+        // If it's a string, parse it. If it's null/undefined, make it empty array.
+        gallery = typeof p.images === 'string' ? JSON.parse(p.images) : p.images;
+      } catch (e) {
+        gallery = [];
+      }
+      // Ensure it is definitely an array
+      if (!Array.isArray(gallery)) gallery = [];
+      //  FIX END
 
-    return data.map((p) => ({
-      ...p,
-      _id: p._id.toString(),
-      name: p.name || "Untitled Product",
-      price: p.price || 0,
-      category: p.category || "Uncategorized",
-      image: p.image || "https://placehold.co/600x400?text=No+Image",
-      description: p.description || "No description available",
-      stock: p.stock || 0, // Ensure stock is handled
-      createdAt: p.createdAt ? p.createdAt.toString() : null,
-      updatedAt: p.updatedAt ? p.updatedAt.toString() : null,
-    }));
+      return {
+        ...p,
+        _id: p.id.toString(), 
+        name: p.name || "Untitled Product",
+        price: Number(p.price) || 0,
+        category: p.category || "Uncategorized",
+        image: p.image || "https://placehold.co/600x400?text=No+Image", // Main Thumbnail
+        
+        images: gallery, 
+        
+        description: p.description || "No description available",
+        stock: p.stock || 0,
+        createdAt: p.created_at ? p.created_at.toISOString() : null,
+        updatedAt: p.updated_at ? p.updated_at.toISOString() : null,
+      };
+    });
   } catch (error) {
     console.error("❌ Error in getProducts:", error);
     return [];
   }
 }
 
-// 2. GET SINGLE PRODUCT (READ)
+// gettting categories 
+export async function getAllCategories() {
+  try {
+    const query = "SELECT DISTINCT category FROM products ORDER BY category ASC";
+    const [rows] = await db.execute(query);
+    return rows.map(row => row.category).filter(Boolean);
+  } catch (error) {
+    console.error("Error fetching categories:", error);
+    return [];
+  }
+}
+
+
+
+
+//  GET SINGLE PRODUCT (Details Page)
 export async function getProductById(id) {
   try {
-    await init();
     if (!id) return null;
 
-    const product = await products.findOne({ _id: new ObjectId(id) });
-    
-    if (!product) return null;
+    const query = "SELECT * FROM products WHERE id = ?";
+    const [rows] = await db.execute(query, [id]);
+    const p = rows[0];
+
+    if (!p) return null;
+
+    //   Convert JSON string back to Array
+    let gallery = [];
+    try {
+      gallery = typeof p.images === 'string' ? JSON.parse(p.images) : p.images;
+    } catch (e) {
+      console.error("Failed to parse images JSON:", e);
+      gallery = []; 
+    }
 
     return {
-      ...product,
-      _id: product._id.toString(),
-      createdAt: product.createdAt ? product.createdAt.toString() : null,
-      updatedAt: product.updatedAt ? product.updatedAt.toString() : null,
+      ...p,
+      _id: p.id.toString(),
+      price: Number(p.price),
+      image: p.image,         // Main Thumbnail
+      images: gallery || [],   // Full Gallery Array
+      createdAt: p.created_at ? p.created_at.toISOString() : null,
+      updatedAt: p.updated_at ? p.updated_at.toISOString() : null,
     };
   } catch (error) {
-    console.error("❌ Error in getProductById:", error);
+    console.error(" Error in getProductById:", error);
     return null;
   }
 }
 
-// 3. CREATE PRODUCT (CREATE)
+// 3. CREATE PRODUCT (Supports 5 Images)
 export async function createProduct(productData) {
   try {
-    await init();
-    
-    const newProduct = {
-      ...productData,
-      price: parseFloat(productData.price),
-      stock: parseInt(productData.stock) || 0,
-      rating: 0, 
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    };
+    const { name, price, category, description, stock, images } = productData;
 
-    const result = await products.insertOne(newProduct);
-    
-    return { success: true, newId: result.insertedId.toString() };
+    // 🟢 VALIDATION: Max 5 Images
+    const imageList = Array.isArray(images) ? images : [];
+    if (imageList.length > 5) {
+      return { success: false, error: "Maximum 5 images allowed" };
+    }
+
+    // 🟢 AUTO-THUMBNAIL: Use the first image as the main 'image'
+    const mainImage = imageList.length > 0 ? imageList[0] : "https://placehold.co/600x400?text=No+Image";
+
+    // Prepare JSON for storage
+    const imagesJson = JSON.stringify(imageList);
+
+    const query = `
+      INSERT INTO products 
+      (name, price, category, image, images, description, stock, rating, created_at, updated_at)
+      VALUES (?, ?, ?, ?, ?, ?, ?, 0, NOW(), NOW())
+    `;
+
+    const values = [
+      name,
+      parseFloat(price),
+      category,
+      mainImage,   // Saves to 'image' column
+      imagesJson,  // Saves to 'images' column
+      description,
+      parseInt(stock) || 0
+    ];
+
+    const [result] = await db.execute(query, values);
+
+    return { success: true, newId: result.insertId.toString() };
   } catch (error) {
     console.error("❌ Error in createProduct:", error);
     return { success: false, error: error.message };
   }
 }
 
-// 4. UPDATE PRODUCT (UPDATE)
+// 4. UPDATE PRODUCT (Handles Dynamic Updates)
 export async function updateProduct(id, updateData) {
   try {
-    await init();
-    
-    
-    const { _id, ...fieldsToUpdate } = updateData;
+    const { _id, images, ...fieldsToUpdate } = updateData;
+    const values = [];
+    const updates = [];
 
-    const result = await products.updateOne(
-      { _id: new ObjectId(id) },
-      { 
-        $set: {
-          ...fieldsToUpdate,
-          price: parseFloat(fieldsToUpdate.price),
-          stock: parseInt(fieldsToUpdate.stock),
-          updatedAt: new Date()
-        } 
+    // 1. Loop through normal fields (name, price, etc.)
+    Object.keys(fieldsToUpdate).forEach((key) => {
+      updates.push(`${key} = ?`);
+      values.push(fieldsToUpdate[key]);
+    });
+
+    // 2. Handle Images specifically
+    if (images && Array.isArray(images)) {
+      if (images.length > 5) return { success: false, error: "Max 5 images allowed" };
+
+      // Update the gallery JSON
+      updates.push("images = ?");
+      values.push(JSON.stringify(images));
+
+      // Automatically update the main thumbnail if images exist
+      if (images.length > 0) {
+        updates.push("image = ?");
+        values.push(images[0]);
       }
-    );
+    }
 
-    return { success: true, modifiedCount: result.modifiedCount };
+    if (updates.length === 0) return { success: false, error: "No fields to update" };
+
+    // Add ID for the WHERE clause
+    values.push(id);
+
+    const query = `UPDATE products SET ${updates.join(", ")}, updated_at = NOW() WHERE id = ?`;
+    const [result] = await db.execute(query, values);
+
+    return { success: true, modifiedCount: result.affectedRows };
   } catch (error) {
     console.error("❌ Error in updateProduct:", error);
     return { success: false, error: error.message };
   }
-}
+} 
 
-// 5. DELETE PRODUCT (DELETE)
-
+// DELETE PRODUCT
 export async function deleteProduct(id) {
   try {
-    await init();
-    
-    const result = await products.deleteOne({ _id: new ObjectId(id) });
-    
-    return { success: true, deletedCount: result.deletedCount };
+    const query = "DELETE FROM products WHERE id = ?";
+    const [result] = await db.execute(query, [id]);
+
+    return { success: true, deletedCount: result.affectedRows };
   } catch (error) {
     console.error("❌ Error in deleteProduct:", error);
     return { success: false, error: error.message };

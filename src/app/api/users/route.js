@@ -1,34 +1,24 @@
-// src/app/api/users/route.js
 import { NextResponse } from "next/server";
-import { clientPromise } from "@/lib/mongodb"; // Adjust path to your mongo client
+import { syncUser } from "@/lib/users"; 
 
-export async function POST(request) {
+export async function POST(req) {
   try {
-    const { clerkId, email, name } = await request.json();
-    const client = await clientPromise;
-    const db = client.db();
+    const { clerkId, email, name } = await req.json();
 
-    // 1. Check if user already exists
-    const existingUser = await db.collection("users").findOne({ clerkId });
-
-    if (!existingUser) {
-      // 2. Determine Role: If email matches your admin email, set role to admin
-      const role = email === "your-admin-email@example.com" ? "admin" : "customer";
-
-      const newUser = {
-        clerkId,
-        email,
-        name,
-        role,
-        createdAt: new Date(),
-      };
-
-      await db.collection("users").insertOne(newUser);
-      return NextResponse.json({ message: "User created", role }, { status: 201 });
+    if (!clerkId || !email) {
+      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    return NextResponse.json({ message: "User exists", role: existingUser.role }, { status: 200 });
+    // Call the library function
+    const result = await syncUser(clerkId, email, name);
+
+    if (!result.success) {
+      return NextResponse.json({ error: result.error }, { status: 500 });
+    }
+
+    return NextResponse.json({ success: true, action: result.action });
+
   } catch (error) {
-    return NextResponse.json({ error: "Server error" }, { status: 500 });
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

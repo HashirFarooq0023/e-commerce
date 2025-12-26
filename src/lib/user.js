@@ -1,39 +1,57 @@
-import clientPromise from "./mongodb";
+import db from "./db";
 
-let client;
-let db;
-let users; // This needs to be assigned inside init()
-
-async function init() {
-  if (db) return;
+// 1. FIND USER BY EMAIL (Used for Login)
+export async function findUserByEmail(email) {
   try {
-    client = await clientPromise;
-    db = client.db("imageprocessing");
-    // 👇 Assign the collection here
-    users = db.collection("users"); 
+    const query = "SELECT * FROM users WHERE email = ?";
+    const [rows] = await db.execute(query, [email]);
+    return rows[0] || null;
   } catch (error) {
-    throw new Error("Failed to connect to database");
+    console.error("❌ Error finding user:", error);
+    return null;
   }
 }
 
-export async function getAdminEmails() {
-  await init();
+// 2. CREATE USER (Used for Register)
+export async function createUser({ email, password, name }) {
+  try {
+    // Generate a simple ID (since your DB expects a string)
+    const newId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 
-  const admins = await users
-    .find({ role: "admin" })
-    .project({ email: 1, _id: 0 })
-    .toArray();
+    const query = `
+      INSERT INTO users (id, email, password, name, role, created_at, updated_at)
+      VALUES (?, ?, ?, ?, 'user', NOW(), NOW())
+    `;
 
-  return admins.map(user => user.email);
+    await db.execute(query, [newId, email, password, name || "User"]);
+    
+    return { id: newId, email, name };
+  } catch (error) {
+    console.error("❌ Error creating user:", error);
+    throw new Error("Could not create user");
+  }
 }
 
-export async function createUser(user) {
-  await init();
-  const result = await users.insertOne(user);
-  return { _id: result.insertedId, ...user }; 
+// 3. GET USER BY ID (Profile/Session)
+export async function getUserById(id) {
+  try {
+    const query = "SELECT id, email, name, role, created_at FROM users WHERE id = ?";
+    const [rows] = await db.execute(query, [id]);
+    return rows[0] || null;
+  } catch (error) {
+    console.error("❌ Error fetching user:", error);
+    return null;
+  }
 }
 
-export async function findUserByEmail(email) {
-  await init();
-  return users.findOne({ email });
+// 4. GET ALL USERS (Admin)
+export async function getAllUsers() {
+  try {
+    const query = "SELECT id, email, name, role, created_at FROM users ORDER BY created_at DESC";
+    const [rows] = await db.execute(query);
+    return rows;
+  } catch (error) {
+    console.error("❌ Error fetching all users:", error);
+    return [];
+  }
 }

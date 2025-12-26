@@ -2,43 +2,65 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Edit, Trash2, Plus, Search, Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation"; // 1. Import Router for security
+import { Edit, Trash2, Plus, Search, Loader2, ImageIcon } from "lucide-react";
 import WaterButton from "@/components/WaterButton";
 import TopNav from "@/components/TopNav";
 
 export default function AdminProductsPage() {
+  const router = useRouter();
+  
+  // 2. Add State for User
+  const [user, setUser] = useState(null);
+  const [authLoading, setAuthLoading] = useState(true);
+
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
 
-  // 1. Fetch Data when page loads
+  // 3. Check Session & Fetch Data
   useEffect(() => {
-    fetchProducts();
-  }, []);
+    async function init() {
+      try {
+        // A. Check Auth
+        const sessionRes = await fetch("/api/auth/session");
+        const sessionData = await sessionRes.json();
+        
+        if (!sessionData.user || sessionData.user.role !== 'admin') {
+          // If not admin, kick them out
+          router.push("/");
+          return; 
+        }
+        
+        setUser(sessionData.user);
+        setAuthLoading(false);
 
-  async function fetchProducts() {
-    try {
-      const res = await fetch("/api/products");
-      const data = await res.json();
-      // Ensure we always have an array
-      setProducts(Array.isArray(data) ? data : []);
-    } catch (error) {
-      console.error("Failed to load products", error);
-    } finally {
-      setLoading(false);
+        // B. Fetch Products (Only if authorized)
+        const productRes = await fetch("/api/products");
+        const productData = await productRes.json();
+        setProducts(Array.isArray(productData) ? productData : []);
+
+      } catch (error) {
+        console.error("Initialization failed", error);
+      } finally {
+        setLoading(false);
+        setAuthLoading(false);
+      }
     }
-  }
 
-  // 2. Filter Logic (Search)
+    init();
+  }, [router]);
+
+  // 4. Filter Logic
   const filteredProducts = products.filter((p) =>
-    p.name?.toLowerCase().includes(search.toLowerCase())
+    p.name?.toLowerCase().includes(search.toLowerCase()) ||
+    p.category?.toLowerCase().includes(search.toLowerCase())
   );
 
-  // 3. Delete Logic
+  // 5. Delete Logic
   async function handleDelete(id) {
     if (!confirm("Are you sure you want to delete this product?")) return;
 
-    // Optimistic Update: Remove from screen immediately
     const backup = [...products];
     setProducts(products.filter((p) => p._id !== id));
 
@@ -47,25 +69,27 @@ export default function AdminProductsPage() {
       if (!res.ok) throw new Error("Failed to delete");
     } catch (error) {
       alert("Could not delete product.");
-      setProducts(backup); // Put it back if error
+      setProducts(backup);
     }
   }
 
+  // Show nothing or a loader while checking permission
+  if (authLoading) return null; 
+
   return (
     <div className="page">
-      {/* Navigation */}
-      <TopNav categories={[]} />
+      {/* 6. Pass the fetched user to TopNav */}
+      <TopNav categories={[]} user={user} />
 
-      <div style={{ maxWidth: '1000px', margin: '0 auto', marginTop: '20px' }}>
+      <div style={{ maxWidth: '1000px', margin: '0 auto', marginTop: '20px', paddingBottom: '40px' }}>
         
         {/* --- Header --- */}
         <div className="panel-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
           <div>
-            <h2>Inventory</h2>
-            <p className="subtitle" style={{ margin: 0 }}>Manage your store catalog</p>
+            <h2 style={{ fontSize: '1.8rem', margin: 0 }}>Inventory</h2>
+            <p className="subtitle" style={{ margin: 0, opacity: 0.7 }}>Manage your store catalog</p>
           </div>
           
-        
           <Link href="/admin/addproducts">
             <WaterButton variant="primary">
               <Plus size={18} style={{ marginRight: '8px' }} />
@@ -79,78 +103,111 @@ export default function AdminProductsPage() {
           <Search size={18} style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', color: '#64748b' }} />
           <input 
             type="text" 
-            placeholder="Search products..." 
+            placeholder="Search products by name or category..." 
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             style={{
               width: '100%',
               padding: '12px 12px 12px 44px',
-              background: 'rgba(0,0,0,0.3)',
+              background: 'rgba(255,255,255,0.05)',
               border: '1px solid rgba(255,255,255,0.1)',
               borderRadius: '12px',
               color: '#fff',
-              outline: 'none'
+              outline: 'none',
+              fontSize: '1rem'
             }}
           />
         </div>
 
         {/* --- The Table Panel --- */}
-        <div className="panel" style={{ padding: 0, overflow: 'hidden' }}>
+        <div className="panel" style={{ padding: 0, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
           {loading ? (
-            <div style={{ padding: '40px', textAlign: 'center', color: '#94a3b8' }}>
-              <Loader2 className="spin" size={24} style={{ marginBottom: '10px' }} />
+            <div style={{ padding: '60px', textAlign: 'center', color: '#94a3b8' }}>
+              <Loader2 className="spin" size={32} style={{ marginBottom: '15px', margin: '0 auto' }} />
               <p>Loading inventory...</p>
             </div>
           ) : (
             <div style={{ overflowX: 'auto' }}>
               <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: '0' }}>
                 <thead>
-                  <tr style={{ background: 'rgba(255,255,255,0.02)', color: '#94a3b8', fontSize: '0.85rem', textAlign: 'left' }}>
-                    <th style={{ padding: '16px' }}>Product</th>
-                    <th style={{ padding: '16px' }}>Category</th>
-                    <th style={{ padding: '16px' }}>Price</th>
-                    <th style={{ padding: '16px' }}>Stock</th>
-                    <th style={{ padding: '16px', textAlign: 'right' }}>Actions</th>
+                  <tr style={{ background: 'rgba(255,255,255,0.03)', color: '#94a3b8', fontSize: '0.85rem', textAlign: 'left' }}>
+                    <th style={{ padding: '16px', fontWeight: 600 }}>Product</th>
+                    <th style={{ padding: '16px', fontWeight: 600 }}>Category</th>
+                    <th style={{ padding: '16px', fontWeight: 600 }}>Price</th>
+                    <th style={{ padding: '16px', fontWeight: 600 }}>Stock</th>
+                    <th style={{ padding: '16px', textAlign: 'right', fontWeight: 600 }}>Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   {filteredProducts.map((product) => (
-                    <tr key={product._id} className="admin-row" style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                    <tr key={product._id} className="admin-row" style={{ borderBottom: '1px solid rgba(255,255,255,0.05)', transition: 'background 0.2s' }}>
                       
                       {/* Name & Image */}
-                      <td style={{ padding: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-                        <img 
-                          src={product.image} 
-                          alt={product.name} 
-                          style={{ width: '40px', height: '40px', borderRadius: '8px', objectFit: 'cover', background: '#333' }}
-                        />
-                        <span style={{ fontWeight: 600 }}>{product.name}</span>
+                      <td style={{ padding: '16px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                          <div style={{ position: 'relative', width: '48px', height: '48px' }}>
+                            <img 
+                              src={product.image} 
+                              alt={product.name} 
+                              style={{ width: '100%', height: '100%', borderRadius: '8px', objectFit: 'cover', background: '#333' }}
+                            />
+                          </div>
+                          <div>
+                            <span style={{ fontWeight: 600, display: 'block', color: '#f8fafc' }}>{product.name}</span>
+                            <span style={{ fontSize: '0.8rem', color: '#64748b' }}>ID: {product._id}</span>
+                          </div>
+                        </div>
                       </td>
 
                       {/* Category */}
                       <td style={{ padding: '16px' }}>
-                        <span className="chip" style={{ fontSize: '0.8rem' }}>{product.category}</span>
+                        <span className="chip" style={{ 
+                          fontSize: '0.8rem', 
+                          padding: '4px 10px', 
+                          borderRadius: '20px', 
+                          background: 'rgba(255,255,255,0.1)', 
+                          color: '#e2e8f0'
+                        }}>
+                          {product.category}
+                        </span>
                       </td>
 
                       {/* Price */}
-                      <td style={{ padding: '16px', fontWeight: 600 }}>${product.price}</td>
+                      <td style={{ padding: '16px', fontWeight: 600, color: '#f8fafc' }}>
+                        ${Number(product.price).toFixed(2)}
+                      </td>
 
                       {/* Stock */}
                       <td style={{ padding: '16px' }}>
-                        <span style={{ color: product.stock < 10 ? '#ef4444' : '#22c55e', fontSize: '0.9rem' }}>
-                          {product.stock} left
-                        </span>
+                        {product.stock === 0 ? (
+                           <span style={{ color: '#ef4444', fontWeight: 500, fontSize: '0.9rem' }}>Out of Stock</span>
+                        ) : (
+                           <span style={{ color: product.stock < 10 ? '#f59e0b' : '#22c55e', fontSize: '0.9rem', fontWeight: 500 }}>
+                             {product.stock} in stock
+                           </span>
+                        )}
                       </td>
 
                       {/* Actions */}
                       <td style={{ padding: '16px', textAlign: 'right' }}>
                         <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '8px' }}>
-                          <Link href={`/admin/products/${product._id}`}>
-                            <button className="action-btn edit" title="Edit">
+                          <Link href={`/admin/products/${product._id}`}> 
+                            <button className="action-btn edit" title="Edit" style={{ 
+                              background: 'transparent', border: '1px solid rgba(255,255,255,0.2)', 
+                              color: '#fff', padding: '6px', borderRadius: '6px', cursor: 'pointer' 
+                            }}>
                               <Edit size={16} />
                             </button>
                           </Link>
-                          <button className="action-btn delete" onClick={() => handleDelete(product._id)}>
+                          <button 
+                            className="action-btn delete" 
+                            onClick={() => handleDelete(product._id)}
+                            title="Delete"
+                            style={{ 
+                              background: 'rgba(239, 68, 68, 0.1)', border: '1px solid rgba(239, 68, 68, 0.3)', 
+                              color: '#ef4444', padding: '6px', borderRadius: '6px', cursor: 'pointer' 
+                            }}
+                          >
                             <Trash2 size={16} />
                           </button>
                         </div>
@@ -160,8 +217,9 @@ export default function AdminProductsPage() {
 
                   {filteredProducts.length === 0 && (
                     <tr>
-                      <td colSpan="5" style={{ textAlign: 'center', padding: '40px', color: '#64748b' }}>
-                        No products found.
+                      <td colSpan="5" style={{ textAlign: 'center', padding: '60px', color: '#64748b' }}>
+                        <ImageIcon size={48} style={{ opacity: 0.2, marginBottom: '10px' }} />
+                        <p>No products found matching your search.</p>
                       </td>
                     </tr>
                   )}

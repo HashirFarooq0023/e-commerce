@@ -3,33 +3,55 @@
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Save, UploadCloud, X, Loader2, ChevronDown } from "lucide-react"; // ✨ Added ChevronDown
+import { ArrowLeft, Save, UploadCloud, X, Loader2, ChevronDown } from "lucide-react"; 
 import WaterButton from "@/components/WaterButton";
 import TopNav from "@/components/TopNav";
 
 const CATEGORIES = [
-  "Clothing",
-  "Electronics",
-  "Accessories",
-  "Jewellery",
-  "Skin Care",
-  "Home & Garden",
-  "Beauty",
-  "Skin Care",
-  "Sports",
-  "Others"
+  "Clothing", "Electronics", "Accessories", "Jewellery",
+  "Skin Care", "Home & Garden", "Beauty", "Sports", "Others"
 ];
 
 export default function AddProductPage() {
   const router = useRouter();
+  
+  // 🔐 1. AUTH STATE
+  const [user, setUser] = useState(null);
+  const [checkingAuth, setCheckingAuth] = useState(true);
+
+  // Form State
   const [loading, setLoading] = useState(false);
   const [dragActive, setDragActive] = useState(false);
-
-
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   
-  // Close dropdown if clicking outside
   const dropdownRef = useRef(null);
+
+  // 🔐 2. CHECK PERMISSION ON LOAD
+  useEffect(() => {
+    async function checkAdmin() {
+      try {
+        const res = await fetch("/api/auth/session");
+        const data = await res.json();
+
+        // If no user OR role is not admin -> Redirect
+        if (!data.user || data.user.role !== 'admin') {
+          router.push("/"); // Kick to home
+          return;
+        }
+
+        // If Admin, allow access
+        setUser(data.user);
+      } catch (err) {
+        console.error("Auth failed", err);
+        router.push("/");
+      } finally {
+        setCheckingAuth(false);
+      }
+    }
+    checkAdmin();
+  }, [router]);
+
+  // Close dropdown if clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -46,7 +68,7 @@ export default function AddProductPage() {
     category: "", 
     stock: "",
     rating: 4.5,
-    image: "",
+    images: [], 
     description: "",
     highlights: "",
   });
@@ -56,48 +78,80 @@ export default function AddProductPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   }
 
-  // ✨ NEW: Function to handle custom category click
   function selectCategory(cat) {
     setFormData((prev) => ({ ...prev, category: cat }));
     setIsDropdownOpen(false);
   }
 
-  // DRAG AND DROP 
+  // --- IMAGE UPLOAD HANDLERS ---
   function handleDrag(e) {
     e.preventDefault();
     e.stopPropagation();
     if (e.type === "dragenter" || e.type === "dragover") setDragActive(true);
     else if (e.type === "dragleave") setDragActive(false);
   }
+
   function handleDrop(e) {
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
-    if (e.dataTransfer.files && e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      handleFiles(e.dataTransfer.files);
+    }
   }
+
   function handleFileSelect(e) {
-    if (e.target.files && e.target.files[0]) handleFile(e.target.files[0]);
+    if (e.target.files && e.target.files.length > 0) {
+      handleFiles(e.target.files);
+    }
   }
-  function handleFile(file) {
-    if (!file.type.startsWith("image/")) { alert("Please upload an image file"); return; }
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onloadend = () => setFormData((prev) => ({ ...prev, image: reader.result }));
-  }
-  function removeImage() {
-    setFormData((prev) => ({ ...prev, image: "" }));
-  }
- 
 
+  function handleFiles(files) {
+    const currentCount = formData.images.length;
+    const newCount = files.length;
 
+    if (currentCount + newCount > 5) {
+      alert("You can only upload a maximum of 5 images per product.");
+      return;
+    }
+
+    Array.from(files).forEach(file => {
+      if (!file.type.startsWith("image/")) return;
+
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        setFormData(prev => ({
+          ...prev,
+          images: [...prev.images, reader.result]
+        }));
+      };
+    });
+  }
+
+  function removeImage(indexToRemove) {
+    setFormData((prev) => ({
+      ...prev,
+      images: prev.images.filter((_, index) => index !== indexToRemove)
+    }));
+  }
+
+  // --- SUBMIT TO DATABASE ---
   async function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
 
+    if (formData.images.length === 0) {
+      alert("Please upload at least one image.");
+      setLoading(false);
+      return;
+    }
+
     const payload = {
       ...formData,
       highlights: formData.highlights.split(",").map(h => h.trim()).filter(h => h),
-      category: formData.category || "Others" 
+      category: formData.category || "Others",
+      images: formData.images 
     };
 
     try {
@@ -107,24 +161,38 @@ export default function AddProductPage() {
         body: JSON.stringify(payload),
       });
 
-      if (!res.ok) throw new Error("Failed to create product");
+      if (!res.ok) {
+        const errorData = await res.json();
+        throw new Error(errorData.error || "Failed to create product");
+      }
+      
       router.push("/admin/products");
       router.refresh(); 
     } catch (error) {
       console.error(error);
-      alert("Error creating product.");
+      alert(`Error: ${error.message}`);
     } finally {
       setLoading(false);
     }
   }
 
+  // 🔐 3. RENDER LOADER WHILE CHECKING
+  if (checkingAuth) {
+    return (
+      <div className="page" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
+        <Loader2 className="spin" size={40} color="#3b82f6" />
+      </div>
+    );
+  }
+
   return (
     <div className="page">
-      <TopNav categories={[]} /> 
+      {/* 🔐 Pass user to TopNav so avatar shows */}
+      <TopNav categories={[]} user={user} /> 
 
       <div style={{ maxWidth: '800px', margin: '0 auto', paddingBottom: '40px' }}>
         
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '30px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '30px', marginTop: '20px' }}>
           <Link href="/admin/products">
             <button className="icon-btn" style={{ width: '40px', height: '40px', background: 'rgba(255,255,255,0.05)' }}>
               <ArrowLeft size={20} />
@@ -136,41 +204,78 @@ export default function AddProductPage() {
         <form className="panel" onSubmit={handleSubmit}>
           <div className="form-grid">
             
-            {/* Image Upload */}
-            <div style={{ gridColumn: '1 / -1', marginBottom: '10px' }}>
-              <label>Product Image</label>
-              {!formData.image ? (
+            {/* --- IMAGE SECTION --- */}
+            <div style={{ gridColumn: '1 / -1', marginBottom: '20px' }}>
+              <label style={{ display: 'flex', justifyContent: 'space-between' }}>
+                Product Images 
+                <span style={{ fontSize: '0.8rem', opacity: 0.7 }}>
+                  {formData.images.length} / 5 Uploaded
+                </span>
+              </label>
+
+              {/* Upload Box */}
+              {formData.images.length < 5 && (
                 <div 
                   className={`drop-zone ${dragActive ? "active" : ""}`}
                   onDragEnter={handleDrag} onDragLeave={handleDrag} onDragOver={handleDrag} onDrop={handleDrop}
                   onClick={() => document.getElementById('file-upload').click()}
+                  style={{ marginBottom: '16px' }}
                 >
-                  <input type="file" id="file-upload" style={{ display: 'none' }} accept="image/*" onChange={handleFileSelect} />
-                  <div style={{ pointerEvents: 'none' }}>
+                  <input 
+                    type="file" 
+                    id="file-upload" 
+                    multiple 
+                    style={{ display: 'none' }} 
+                    accept="image/*" 
+                    onChange={handleFileSelect} 
+                  />
+                  <div>
                     <UploadCloud size={40} style={{ margin: '0 auto 12px', opacity: 0.5 }} />
-                    <p style={{ margin: 0, fontWeight: 500 }}>Click or Drag image here</p>
+                    <p style={{ margin: 0, fontWeight: 500 }}>
+                      Click or Drag images here (Max 5)
+                    </p>
                   </div>
                 </div>
-              ) : (
-                <div style={{ position: 'relative', width: '100%', height: '200px', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
-                  <img src={formData.image} alt="Preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  <button type="button" onClick={removeImage} style={{ position: 'absolute', top: '10px', right: '10px', background: 'rgba(0,0,0,0.6)', border: 'none', color: '#fff', borderRadius: '50%', width: '32px', height: '32px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <X size={16} />
-                  </button>
+              )}
+
+              {/* Image Preview Grid */}
+              {formData.images.length > 0 && (
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', gap: '10px' }}>
+                  {formData.images.map((img, idx) => (
+                    <div key={idx} style={{ position: 'relative', aspectRatio: '1/1', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
+                      <img src={img} alt={`Preview ${idx}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      <button 
+                        type="button" 
+                        onClick={() => removeImage(idx)} 
+                        style={{ 
+                          position: 'absolute', top: '4px', right: '4px', 
+                          background: 'rgba(0,0,0,0.7)', border: 'none', 
+                          color: '#ff4d4d', borderRadius: '50%', 
+                          width: '24px', height: '24px', cursor: 'pointer',
+                          display: 'flex', alignItems: 'center', justifyContent: 'center' 
+                        }}
+                      >
+                        <X size={14} />
+                      </button>
+                      {idx === 0 && (
+                        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'rgba(0,0,0,0.6)', color: 'white', fontSize: '10px', textAlign: 'center', padding: '2px 0' }}>
+                          Main Cover
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </div>
               )}
             </div>
 
+            {/* Inputs */}
             <div>
               <label>Product Name</label>
               <input name="name" required placeholder="e.g. Neon Cyber Jacket" value={formData.name} onChange={handleChange} />
             </div>
 
-            {/*  Custom Category */}
             <div ref={dropdownRef} style={{ position: 'relative' }}>
               <label>Category</label>
-              
-              {/* The "Box" users click on */}
               <button 
                 type="button" 
                 className="custom-select-trigger"
@@ -179,15 +284,14 @@ export default function AddProductPage() {
                 <span style={{ color: formData.category ? '#fff' : '#94a3b8' }}>
                   {formData.category || "Select a category..."}
                 </span>
-                <ChevronDown size={16} style={{ opacity: 0.7, transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: '0.2s' }} />
+                <ChevronDown size={16} style={{ transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: '0.2s' }} />
               </button>
 
-              {/* The "Menu" that drops down */}
               {isDropdownOpen && (
-                <div className="custom-options-list">
-                  {CATEGORIES.map((cat) => (
+                <div className="custom-options-list" style={{ zIndex: 10 }}>
+                  {CATEGORIES.map((cat, idx) => (
                     <div 
-                      key={cat} 
+                      key={`${cat}-${idx}`} 
                       className={`custom-option ${formData.category === cat ? 'selected' : ''}`} 
                       onClick={() => selectCategory(cat)}
                     >
