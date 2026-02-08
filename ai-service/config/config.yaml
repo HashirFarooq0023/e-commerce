@@ -1,0 +1,53 @@
+# Store Assistant Configuration
+
+# LLM Configuration
+llm:
+  model_type: "ollama"  # Options: "openai", "anthropic", "local", "ollama"
+  model_name: "llama3.2"  # Ollama model name (e.g., llama3.2, mistral, etc.)
+  api_key: null  # Set via environment variable: OPENAI_API_KEY (not needed for Ollama)
+  base_url: "http://localhost:11434"  # Ollama base URL (default: localhost:11434)
+  temperature: 0.7
+  max_tokens: 1000
+
+# RAG Configuration
+rag:
+  enabled: true
+  # Use local Ollama embeddings by default (pulled via `ollama pull mxbai-embed-large`)
+  embedding_model: "mxbai-embed-large"
+  embedding_provider: "ollama"  # Options: "ollama", "sentence-transformers"
+  vector_store_type: "chroma"  # "chroma" (Note: Use Python 3.11 or 3.12 for ChromaDB compatibility)
+  top_k: 5
+  persist_dir: "data/vector_store"
+  collection_name: "store_assistant"  # ChromaDB collection name
+
+# Fine-tuning Configuration
+fine_tuning:
+  base_model: "gpt-3.5-turbo"
+  training_data_path: "data/training"
+  models_dir: "models/fine_tuned"
+
+# Product Management
+products:
+  data_file: "data/products/products.json"
+
+# Order Management
+orders:
+  data_file: "data/orders/orders.json"
+
+# Audio Configuration
+audio:
+  tts_engine: "pyttsx3"  # Options: "pyttsx3", "gTTS", "elevenlabs"
+  stt_engine: "whisper"  # Options: "whisper", "google", "sphinx"
+  tts_voice: null
+  tts_rate: 150
+
+# Database Configuration
+database:
+  type: "sqlite"  # Options: "sqlite", "postgresql"
+  connection_string: "data/database/store.db"
+
+# Assistant Configuration
+assistant:
+  use_rag: true
+  enable_audio: true
+  default_response_mode: "chat"  # Options: "chat", "audio", "both"

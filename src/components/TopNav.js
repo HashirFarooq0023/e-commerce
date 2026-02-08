@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ShoppingBag, User, Home, LayoutGrid, ChevronDown, Settings, List, Package, Users } from "lucide-react"; 
+import ChatWidget from "./ChatWidget";
 
 export default function TopNav({
   categories = [],
@@ -19,6 +20,7 @@ export default function TopNav({
   // State for dropdowns
   const [isCatOpen, setIsCatOpen] = useState(false);
   const [isAdminOpen, setIsAdminOpen] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   // 1. Create a Ref to track the navigation DOM element
   const navRef = useRef(null);
@@ -30,6 +32,7 @@ export default function TopNav({
       if (navRef.current && !navRef.current.contains(event.target)) {
         setIsCatOpen(false);
         setIsAdminOpen(false);
+        setIsChatOpen(false);
       }
     }
 
@@ -94,6 +97,8 @@ export default function TopNav({
           ShopLite
         </Link>
 
+    
+
         <Link 
           href="/" 
           className={`nav-pill-btn ${isHome && !selectedCategory ? "active" : ""}`}
@@ -139,6 +144,17 @@ export default function TopNav({
       {/* RIGHT: Actions + Admin */}
       <div className="nav-right">
         
+      <div className="nav-dropdown-wrapper">
+            <button 
+              className={`icon-btn ${isChatOpen ? "active" : ""}`}
+              onClick={() => { setIsChatOpen(!isChatOpen); setIsAdminOpen(false); setIsCatOpen(false); }}
+              title="Chat with AI"
+            >
+              🤖
+            </button>
+            <ChatWidget isOpen={isChatOpen} setIsOpen={setIsChatOpen} />
+        </div>
+
         {/* Cart */}
         <Link href="/cart" className={`icon-btn ${pathname === "/cart" ? "active" : ""}`} title="Cart">
           <ShoppingBag size={20} strokeWidth={2.5} />
@@ -161,6 +177,8 @@ export default function TopNav({
             <User size={20} strokeWidth={2.5} />
           )}
         </Link>
+
+     
 
         {/* 🛡️ ADMIN MENU (ONLY SHOW IF ROLE IS ADMIN) */}
         {user && user.role === 'admin' && (

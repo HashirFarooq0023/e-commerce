@@ -1,4 +1,4 @@
-import { getProductById, getAllCategories } from "@/lib/products";
+import { getProductById, getAllCategories, getProducts } from "@/lib/products"; // ✅ getProducts is already imported
 import ProductDetails from "@/components/ProductDetails";
 import { getSession } from "@/lib/auth";
 import { PackageX, ArrowLeft } from "lucide-react";
@@ -7,13 +7,15 @@ import Link from "next/link";
 export default async function ProductPage({ params }) {
   const { id } = await params;
   
-  // 🟢 FIX: Add 'categories' to the array below
-  const [product, session, categories] = await Promise.all([
+  // 🟢 FIX: Fetch 'allProducts' here so the variable exists!
+  const [product, session, categories, allProducts] = await Promise.all([
     getProductById(id),
     getSession(),
-    getAllCategories()
+    getAllCategories(),
+    getProducts() 
   ]);
 
+  // Handle "Not Found"
   if (!product) {
     return (
       <div style={styles.container}>
@@ -34,69 +36,31 @@ export default async function ProductPage({ params }) {
     );
   }
 
-  // 4. Serialize User (match format from page.js)
+  // Serialize User
   const user = session ? {
     id: session.userId,
     email: session.email,
     name: session.name || "User"
   } : null;
 
-  // 5. Render Client Component
-  return <ProductDetails product={product} user={user} categories={categories}/>;
+  // Render Component
+  // ✅ Now 'allProducts' contains data, so the Carousel will appear.
+  return (
+    <ProductDetails 
+      product={product} 
+      products={allProducts} 
+      user={user} 
+      categories={categories}
+    />
+  );
 }
 
+// ... styles remain the same ...
 const styles = {
-  container: {
-    minHeight: '80vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px',
-  },
-  card: {
-    maxWidth: '400px',
-    width: '100%',
-    textAlign: 'center',
-    background: 'rgba(255, 255, 255, 0.03)',
-    border: '1px solid rgba(255, 255, 255, 0.1)',
-    borderRadius: '16px',
-    padding: '40px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  iconWrapper: {
-    width: '80px',
-    height: '80px',
-    background: 'rgba(239, 68, 68, 0.1)', // Red tint
-    borderRadius: '50%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: '20px',
-  },
-  title: {
-    fontSize: '1.5rem',
-    fontWeight: '700',
-    color: '#ffffff',
-    margin: '0 0 10px 0',
-  },
-  text: {
-    color: '#94a3b8',
-    lineHeight: '1.6',
-    marginBottom: '30px',
-    fontSize: '0.95rem',
-  },
-  button: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    backgroundColor: '#3b82f6',
-    color: 'white',
-    padding: '10px 20px',
-    borderRadius: '8px',
-    textDecoration: 'none',
-    fontWeight: '500',
-    transition: 'background 0.2s',
-  }
+  container: { minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' },
+  card: { maxWidth: '400px', width: '100%', textAlign: 'center', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '16px', padding: '40px', display: 'flex', flexDirection: 'column', alignItems: 'center' },
+  iconWrapper: { width: '80px', height: '80px', background: 'rgba(239, 68, 68, 0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' },
+  title: { fontSize: '1.5rem', fontWeight: '700', color: '#ffffff', margin: '0 0 10px 0' },
+  text: { color: '#94a3b8', lineHeight: '1.6', marginBottom: '30px', fontSize: '0.95rem' },
+  button: { display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: '#3b82f6', color: 'white', padding: '10px 20px', borderRadius: '8px', textDecoration: 'none', fontWeight: '500', transition: 'background 0.2s' }
 };

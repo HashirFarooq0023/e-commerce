@@ -1,0 +1,1502 @@
+[
+    {
+        "instruction": "User asking for a discount in Roman Urdu (Casual)",
+        "input": "Yaar bhai thora discount to karo, mein student hoon.",
+        "output": "Sir hum students ki bohot respect kartay hain, lekin prices already discounted hain. Aap ke liye complimentary bag add kar dein gay."
+    },
+    {
+        "instruction": "User asking about gaming performance in Mixed Language",
+        "input": "Boss is laptop pe GTA V chal jaye gi smooth bina lag ke?",
+        "output": "Jee bilkul sir, is mein NVIDIA ka dedicated graphic card hai. GTA V high settings par makhan chalay gi."
+    },
+    {
+        "instruction": "User inquiring about delivery locations in English",
+        "input": "Do you offer cash on delivery service in Multan?",
+        "output": "Yes sir, we offer Cash on Delivery all over Pakistan, including Multan via Leopards or TCS."
+    },
+    {
+        "instruction": "User asking for 'Final Price' in Roman Urdu (Bargaining)",
+        "input": "Market mein yehi cheez 50 hazar ki mil rahi hai, aap 55 kyun mang rahay ho? Final batao.",
+        "output": "Sir market mein refurbished units bhi hotay hain. Humari machine 100% fresh import hai with original charger, is liye price fix hai."
+    },
+    {
+        "instruction": "User asking about specs comparison in English",
+        "input": "Which one is better for programming, the MacBook Air M1 or the Dell XPS 13?",
+        "output": "For programming, the MacBook Air M1 is generally preferred due to its Unix-based OS and battery life, but the Dell XPS is excellent if you need Windows specific tools."
+    },
+    {
+        "instruction": "User asking about shop location in Roman Urdu",
+        "input": "Dukan kahan hai aap ki? Mein khud aa kar check karna chahta hoon.",
+        "output": "Sir humari shop Hafeez Center Lahore mein basement mein hai. Aap shop number 45 par visit kar saktay hain."
+    },
+    {
+        "instruction": "User asking about warranty in Mixed Language",
+        "input": "Is device ki warranty ka kya scene hai? Kal ko kharab ho gayi to?",
+        "output": "Sir iski 15 days check warranty hai. Agar koi hardware issue aya to hum replace kar ke dein gay, befikar rahein."
+    },
+    {
+        "instruction": "User asking about payment methods in English",
+        "input": "Can I pay via credit card or bank transfer?",
+        "output": "Yes sir, bank transfer is available. For credit card, you will have to visit our outlet as machine charges may apply."
+    },
+    {
+        "instruction": "User asking about box condition in Roman Urdu",
+        "input": "Ye dabba pack hai ya open box import hai?",
+        "output": "Sir ye open box import hai, condition 10/10 hogi, bilkul new jaisa, lekin official sealed box nahi hoga."
+    },
+    {
+        "instruction": "User asking regarding RAM upgrade in Mixed Language",
+        "input": "Yaar iski RAM 8GB hai, mujhe 16GB karwani hai. Ho jaye gi?",
+        "output": "Jee sir, extra slot available hai. 2000 rupees extra lagen gay aur hum 16GB kar dein gay."
+    },
+    {
+        "instruction": "User asking about battery backup in Roman Urdu",
+        "input": "Battery kitna time nikal jati hai movie waghaira par?",
+        "output": "Sir multimedia use par aaram se 4 se 5 ghantay nikal jaye gi. Original battery hai."
+    },
+    {
+        "instruction": "User asking for specific model availability in English",
+        "input": "Is the HP EliteBook G5 available in stock right now?",
+        "output": "Yes sir, G5 is in stock. We have the i5 and i7 variants both available."
+    },
+    {
+        "instruction": "User expressing doubt about online orders in Roman Urdu (Trust)",
+        "input": "Bhai online fraud to nahi hoga? Pehlay paisay bhej don aur cheez na aye?",
+        "output": "Sir humari registered company hai aur 10 saal se market mein hain. Aap reviews check kar saktay hain, trust ka masla nahi hoga."
+    },
+    {
+        "instruction": "User asking for a cheap laptop in Mixed Language",
+        "input": "Mujhe koi sasta laptop dikhayen bas assignment aur browsing ke liye chahiye range 30k hai.",
+        "output": "Sir 30k ki range mein apko Lenovo ThinkPad T450 mil jaye ga, assignments ke liye best machine hai."
+    },
+    {
+        "instruction": "User asking about condition in Roman Urdu",
+        "input": "Condition kaisi hai? Scratches waghaira to nahi hain?",
+        "output": "Sir condition A++ hai, saaf suthra piece hoga. Aap whatsapp par pics mangwa kar dekh lein."
+    },
+    {
+        "instruction": "User asking about return policy in English",
+        "input": "What is your return policy if I don't like the product?",
+        "output": "Sir, we don't offer returns on 'change of mind', but if there is a technical fault within 7 days, we will exchange it."
+    },
+    {
+        "instruction": "User asking about COD charges in Mixed Language",
+        "input": "Cash on delivery ke charges extra hon gay kya Karachi ke liye?",
+        "output": "Jee sir, delivery charges 500 rupees advance hotay hain confirmation ke liye, baaki payment delivery par."
+    },
+    {
+        "instruction": "User asking about graphics card in Roman Urdu",
+        "input": "Is mein graphics card kitne GB ka laga hua hai?",
+        "output": "Sir is mein 2GB AMD ka dedicated card laga hua hai, editing ke liye theek hai."
+    },
+    {
+        "instruction": "User asking regarding PTA tax (for phones/tablets context) in Mixed Language",
+        "input": "Boss ye tablet PTA approved hai ya patch karwana paray ga?",
+        "output": "Sir ye Non-PTA hai, lekin wifi par chalanay ke liye best hai. Sim nahi chalay gi."
+    },
+    {
+        "instruction": "User asking about heating issues in Roman Urdu",
+        "input": "Suna hai HP ke laptops garam bohot hotay hain, is mein wo masla to nahi?",
+        "output": "Sir wo puranay models mein tha, ye G6 series hai, iska cooling system bohot behtar hai. Heat ka issue nahi aye ga."
+    },
+    {
+        "instruction": "User asking about box contents in English",
+        "input": "Does it come with the original charger?",
+        "output": "Yes sir, we provide the original branded charger and power cable with the laptop."
+    },
+    {
+        "instruction": "User asking for best price in Roman Urdu (Rude)",
+        "input": "Dahi bhallay wali rate na lagao, sahi daam batao lena hai.",
+        "output": "Sir humari price fixed aur munasib hai. Quality mein hum koi compromise nahi kartay."
+    },
+    {
+        "instruction": "User asking about editing capability in Mixed Language",
+        "input": "Premiere Pro aur After Effects chal jaye ga is specs par?",
+        "output": "Jee sir, chal jaye ga magar heavy rendering ke liye apko workstation laptop lena chahiye, ye thora lag kare ga."
+    },
+    {
+        "instruction": "User asking to reserve a product in Roman Urdu",
+        "input": "Bhai ye wala piece side pe rakh dena, mein shaam tak aaun ga.",
+        "output": "Sir hum hold nahi kar saktay lambay time ke liye, lekin agar aap token money bhej dein to hum side pe rakh dein gay."
+    },
+    {
+        "instruction": "User asking about backlit keyboard in English",
+        "input": "Does this model feature a backlit keyboard?",
+        "output": "Yes sir, this model has a white backlit keyboard with two brightness levels."
+    },
+    {
+        "instruction": "User asking about installment plans in Mixed Language",
+        "input": "Boss installments par mil jaye ga? Credit card nahi hai mere paas.",
+        "output": "Sorry sir, hum sirf cash ya credit card par deal kartay hain, personal installments available nahi hain."
+    },
+    {
+        "instruction": "User asking about generation in Roman Urdu",
+        "input": "Ye konsi generation hai? 6th ya 7th?",
+        "output": "Sir ye 8th generation quad-core processor hai."
+    },
+    {
+        "instruction": "User asking about touchscreen in English",
+        "input": "Is the display touch-enabled?",
+        "output": "No sir, this represents the non-touch anti-glare variant, which is better for eyes during long use."
+    },
+    {
+        "instruction": "User asking about hard disk expansion in Mixed Language",
+        "input": "Is mein HDD lag sakti hai ya sirf SSD ki jagah hai?",
+        "output": "Sir is mein dual drive option hai, M.2 SSD bhi lagti hai aur SATA HDD bhi."
+    },
+    {
+        "instruction": "User asking for low budget suggestion in Roman Urdu",
+        "input": "Mere paas sirf 20 hazaar hain, is mein kuch mile ga?",
+        "output": "Sir 20k mein mushkil hai, lekin humaray paas kuch Chromebooks available hain, wo check kar lein?"
+    },
+    {
+        "instruction": "User asking about viewing angles in English",
+        "input": "Is it an IPS panel?",
+        "output": "Yes sir, it is a Full HD IPS display with excellent viewing angles."
+    },
+    {
+        "instruction": "User asking about exchange/trade-in in Mixed Language",
+        "input": "Mera purana laptop de kar naya le sakta hoon? Exchange offer hai?",
+        "output": "Jee sir, hum exchange kartay hain. Aap purana laptop shop par le ayen, check kar ke difference bata dein gay."
+    },
+    {
+        "instruction": "User asking about hinge quality in Roman Urdu",
+        "input": "Iske hinge to nahi tootay huay? Aksar ye masla hota hai.",
+        "output": "Nahi sir, hum har piece check kar ke uthatay hain. Hinge bilkul tight aur original hain."
+    },
+    {
+        "instruction": "User asking about courier service in English",
+        "input": "Which courier service do you use for shipping?",
+        "output": "We generally use TCS or M&P for secure and fast delivery."
+    },
+    {
+        "instruction": "User asking about MS Office in Mixed Language",
+        "input": "Is mein Windows aur Office install kar ke mile ga?",
+        "output": "Jee sir, Windows 10 aur basic softwares hum pre-install kar ke detay hain, plug and play hoga."
+    },
+    {
+        "instruction": "User asking about fingerprint sensor in Roman Urdu",
+        "input": "Fingerprint lock hai is mein?",
+        "output": "Jee sir, is mein fingerprint sensor available hai."
+    },
+    {
+        "instruction": "User asking about weight in English",
+        "input": "Is it heavy to carry? I need something portable.",
+        "output": "Not at all sir, it weighs just 1.2kg. Very lightweight and easy to carry."
+    },
+    {
+        "instruction": "User asking about scratches in Mixed Language",
+        "input": "Screen pe koi spot ya dead pixel to nahi hai?",
+        "output": "Sir screen 100% clear hai. Dispatch se pehlay hum video bana kar bhej saktay hain tasalli ke liye."
+    },
+    {
+        "instruction": "User asking for whatsapp contact in Roman Urdu",
+        "input": "Number bhejo apna, details wahan baat kartay hain.",
+        "output": "Sir aap humein 0300-1234567 par WhatsApp kar saktay hain."
+    },
+    {
+        "instruction": "User asking regarding battery replacement in English",
+        "input": "Is the battery removable or built-in?",
+        "output": "It is a built-in battery, sir, but it can be replaced by a technician if needed in the future."
+    },
+    {
+        "instruction": "User asking about invoice in Mixed Language",
+        "input": "Company ke naam ka bill ban jaye ga? Tax claim karna hai.",
+        "output": "Jee sir, hum computerised invoice bana dein gay aap ki company ke naam par."
+    },
+    {
+        "instruction": "User asking about wholesale rates in Roman Urdu",
+        "input": "Agar 5 pieces loon to wholesale rate lagay ga?",
+        "output": "Jee sir, quantity par hum dealer price laga dein gay. Aap shop visit karein."
+    },
+    {
+        "instruction": "User asking about touch pen in English",
+        "input": "Does the stylus come included in the box?",
+        "output": "For this specific model, the stylus pen is sold separately, sir."
+    },
+    {
+        "instruction": "User asking about fan noise in Roman Urdu",
+        "input": "Pankha shor to nahi karta chaltay waqt?",
+        "output": "Nahi sir, fan bilkul silent hai. Service hui vi hai machine ki."
+    },
+    {
+        "instruction": "User asking about model year in Mixed Language",
+        "input": "Ye model kaunse saal ka hai? 2018 ya 2019?",
+        "output": "Sir ye 2019 ki manufacturing hai."
+    },
+    {
+        "instruction": "User asking about camera quality in Roman Urdu",
+        "input": "Camera kaisa hai? Zoom meeting karni hoti hai.",
+        "output": "Sir iska 720p HD webcam hai, meetings aur online classes ke liye behtareen result hai."
+    },
+    {
+        "instruction": "User asking about booking confirmation in English",
+        "input": "How do I confirm my order?",
+        "output": "Please send your Name, Address, and Phone number along with a screenshot of the advance payment to confirm."
+    },
+    {
+        "instruction": "User asking for freebies in Mixed Language",
+        "input": "Saath mouse ya bag free mile ga?",
+        "output": "Sir hum har laptop ke sath power cable aur aik laptop bag gift detay hain."
+    },
+    {
+        "instruction": "User asking about shop timing in Roman Urdu",
+        "input": "Raat ko kitne bajay tak khuli hoti hai dukan?",
+        "output": "Sir hum raat 9 bajay tak open hotay hain, Sunday ko off hota hai."
+    },
+    {
+        "instruction": "User asking final closing statement in Mixed Language",
+        "input": "Chalo done karo, bhej do Lahore.",
+        "output": "Theek hai sir, shukriya. Aap details send karein, hum kal dispatch karwa detay hain."
+    },
+    {
+        "instruction": "User angry about receiving a damaged product in Roman Urdu",
+        "input": "O bhai! Ye kaisa laptop bheja hai? Screen tooti hui nikli hai dabbe se!",
+        "output": "Sir bohot maazrat, ye courier handling mein hua hoga. Aap pareshan na hon, unboxing video bhej dein, hum claim file kar ke replace kar dein gay."
+    },
+    {
+        "instruction": "User demanding refund in English (Rude)",
+        "input": "This is absolute rubbish. I want my money back right now. You guys are scammers.",
+        "output": "Sir, we sincerely apologize for the inconvenience. We have a 7-day checking warranty. Please share the issue details, and if it's a hardware fault, we will process a refund or exchange."
+    },
+    {
+        "instruction": "User complaining about battery life in Mixed Language",
+        "input": "Yaar tum ne bola tha 4 ghantay battery nikalay gi, ye to 1 ghantay mein dead ho raha hai. Kya scene hai?",
+        "output": "Sir sometimes settings optimize nahi hoti. Aap kindly brightness kam kar ke check karein. Agar phir bhi masla aya to hum battery change kar dein gay."
+    },
+    {
+        "instruction": "User angry about delivery delay in Roman Urdu",
+        "input": "3 din ho gaye hain abhi tak parcel nahi mila. Kahan mar gaya rider?",
+        "output": "Sir tracking update ke mutabiq rider out for delivery hai. Thora rush ki wajah se late ho gaya hoga, mein abhi call kar ke expedite karwata hoon."
+    },
+    {
+        "instruction": "User accusing of fraud in Roman Urdu",
+        "input": "Mujhe lag raha hai tum logon ne fraud kiya hai, phone kyun nahi utha rahay?",
+        "output": "Sir lines busy thin, fraud ka koi scene nahi. Humari shop 10 saal se hai. Batayen kya issue aa raha hai?"
+    },
+    {
+        "instruction": "User upset about heating issue in English",
+        "input": "The laptop gets extremely hot after just 10 minutes. I cannot work on this.",
+        "output": "Sir, please ensure the air vents are not blocked. If it persists, send it back to us; our technician will re-apply thermal paste or replace the fan unit."
+    },
+    {
+        "instruction": "User complaining about wrong charger in Mixed Language",
+        "input": "Boss charger original nahi hai ye, local pakra diya hai. Cable dekho kitni patli hai.",
+        "output": "Sir ye high-quality OEM charger hai, lekin agar apko doubt hai to hum replace kar ke dusra bhej detay hain."
+    },
+    {
+        "instruction": "User angry about scratch on screen in Roman Urdu",
+        "input": "Tum ne kaha tha 10/10 condition hai, is pe to itna bara scratch hai screen pe.",
+        "output": "Sir hum ne check kar ke bheja tha, shayad light mein nazar na aya ho. Aap pic bhejen, hum kuch compensation ya exchange offer kar detay hain."
+    },
+    {
+        "instruction": "User demanding instant reply in Mixed Language (Rude)",
+        "input": "Reply kyun nahi kar rahay? Paisay le liye to ab gayab ho gaye ho?",
+        "output": "Sir bohot sare messages hotay hain is liye time lag gaya. Hum kahin nahi gaye, aap batayen kya seva karein?"
+    },
+    {
+        "instruction": "User upset about performance in English",
+        "input": "This laptop is lagging even on Chrome. You said it's an i7!",
+        "output": "Sir, it might be downloading Windows updates in the background which causes lag initially. Please let it complete, and the speed will normalize."
+    },
+    {
+        "instruction": "User complaining about missing gift in Roman Urdu",
+        "input": "Saath bag anay tha wo kahan hai? Sirf laptop bheja hai.",
+        "output": "Sir maazrat, packing staff se ghalti ho gayi hogi. Mein aaj hi alag se bag dispatch karwata hoon apko."
+    },
+    {
+        "instruction": "User threatening to post on social media in Mixed Language",
+        "input": "Mera masla hal karo warna Facebook groups pe laga dunga tumhari shop ka.",
+        "output": "Sir dhamki na dein, hum masla hal karnay ke liye hi bethay hain. Aap sukoon se batayen hua kya hai, hum zimmedari letay hain."
+    },
+    {
+        "instruction": "User angry about 'Change of Mind' return in Roman Urdu",
+        "input": "Mujhe nahi chahiye ye, wapis le lo. Abbu nahi maan rahay.",
+        "output": "Sir 'change of mind' par return policy nahi hoti, lekin hum apko doosra model exchange mein de saktay hain agar aap chahain."
+    },
+    {
+        "instruction": "User complaining about courier charges in Mixed Language",
+        "input": "Delivery free boli thi, ab rider 500 maang raha hai. Ye kya drama hai?",
+        "output": "Sir ye ghalti se rider ke sheet pe likha reh gaya hoga. Aap usay mat dein, mein courier company call kar ke clear karta hoon."
+    },
+    {
+        "instruction": "User upset about speaker sound in English",
+        "input": "The speakers are crackling at high volume. Defective piece sent.",
+        "output": "Sorry for that, sir. Sometimes dust affects the speakers. Please try restarting, otherwise send it back for a replacement unit."
+    },
+    {
+        "instruction": "User accusing of sending refurbished item in Roman Urdu",
+        "input": "Ye naya nahi hai, is ke screw khulay huay lag rahay hain. Used cheez chipka di.",
+        "output": "Sir ye imported used laptops hi hotay hain, 'brand new' box pack nahi. Hum ne pehlay clear kiya tha ke ye pre-owned stock hai."
+    },
+    {
+        "instruction": "User angry about WiFi connectivity in Mixed Language",
+        "input": "Is mein WiFi connect hi nahi ho raha. Driver missing hain. Kya faida lene ka?",
+        "output": "Sir pareshan na hon, drivers ka issue hoga. Mein apko link bhejta hoon, install karein chal jaye ga. Support team apko guide kar deti hai."
+    },
+    {
+        "instruction": "User asking for refund due to late delivery in Roman Urdu",
+        "input": "Ab rakh lo apna laptop, mujhe nahi chahiye. 1 hafta ho gaya.",
+        "output": "Sir courier ki taraf se delay hua hai, hum sharminda hain. Agar aap receive nahi karna chahtay to rider ko wapis bhej dein, hum refund process kar dein gay."
+    },
+    {
+        "instruction": "User complaining about keyboard keys in English",
+        "input": "The 'Enter' key is stuck and hard to press. How did you QC this?",
+        "output": "Sir, we check every key, but sometimes dust gets stuck during shipping. Please try pressing it firmly, or we will replace the keyboard for free."
+    },
+    {
+        "instruction": "User angry about hidden defects in Mixed Language",
+        "input": "Boss iska hinge dheela hai. Pehlay batana tha na, ab mein kya karun iska?",
+        "output": "Sir hinge tight karwa detay hain, koi bara masla nahi hai. Aap shop le ayen ya hum technician bhej detay hain agar aap same city mein hain."
+    },
+    {
+        "instruction": "User demanding owner's number in Roman Urdu",
+        "input": "Apne malik ka number do, tum se baat nahi karni mujhe.",
+        "output": "Sir mein hi deal kar raha hoon, owner bhi yehi solution dein gay. Aap batayen to sahi masla kya hai, mein hal karta hoon."
+    },
+    {
+        "instruction": "User upset about wrong color in English",
+        "input": "I ordered silver, you sent grey. Can't you read the order?",
+        "output": "Extremely sorry for the mix-up, sir. Please do not open the seal. We will arrange a reverse pickup and send the correct color immediately."
+    },
+    {
+        "instruction": "User complaining about software issues in Mixed Language",
+        "input": "Windows activate nahi hai, watermark aa raha hai. Ye kya scene hai?",
+        "output": "Sir ye digital license hota hai, net connect karein khud activate ho jaye gi. Agar na hui to hum key send kar dein gay."
+    },
+    {
+        "instruction": "User claiming faulty hard drive in Roman Urdu",
+        "input": "Hard disk se awazain aa rahi hain tik tik ki. Ye to kharab hai.",
+        "output": "Sir ye mechanical drive ki awaaz ho sakti hai, lekin agar loud hai to risk nahi lein. Bhej dein, hum SSD se replace kar detay hain."
+    },
+    {
+        "instruction": "User angry about price drop in Mixed Language",
+        "input": "Kal mein 50 ka le ke gaya, aaj 45 ka lagaya hua hai. Mere 5 hazar wapis karo.",
+        "output": "Sir prices dollar rate ke sath change hoti hain. Jis time aap ne liya wo rate tha, aaj sale lagi hai. Purani purchase par refund nahi banta."
+    },
+    {
+        "instruction": "User shouting in caps in English",
+        "input": "DO NOT IGNORE MY TEXT. MY LAPTOP IS NOT TURNING ON.",
+        "output": "Sir, we are not ignoring you. Please plug in the charger and hold the power button for 30 seconds. It might be in sleep mode."
+    },
+    {
+        "instruction": "User accusing of sending wrong specs in Roman Urdu",
+        "input": "Is mein 4GB RAM nikli hai, tum ne 8GB bola tha. Jhoot bol ke bechtay ho.",
+        "output": "Sir task manager mein check karein, kabhi kabhi aik slot show nahi hoti. Agar waqai 4GB hai to ghalti hui hogi, hum 4GB aur bhej detay hain."
+    },
+    {
+        "instruction": "User complaining about dents in Mixed Language",
+        "input": "Boss body pe dent hai corner pe. Ye 'A' category to nahi hai.",
+        "output": "Sir shipping mein dab gaya hoga. Agar performance theek hai to hum apko next purchase par acha discount de dein gay compensation mein."
+    },
+    {
+        "instruction": "User demanding cash refund instead of voucher in English",
+        "input": "I don't want a store credit. Transfer the money to my bank account.",
+        "output": "Sir, as per policy, cash refunds take 7 working days. Please share your IBAN, and accounts department will process it."
+    },
+    {
+        "instruction": "User angry about broken webcam in Roman Urdu",
+        "input": "Camera on hi nahi ho raha, black screen aa rahi hai. Meeting miss ho gayi meri.",
+        "output": "Sir privacy shutter check karein, shayad camera cover band ho. Agar phir bhi na chalay to software issue ho sakta hai."
+    },
+    {
+        "instruction": "User threatening to return to shop physically in Mixed Language",
+        "input": "Mein shop pe aa ke shor karunga agar mera laptop change na kiya.",
+        "output": "Sir shor karnay ki zaroorat nahi, aap shop ayen hum chai pilayen gay aur laptop bhi change kar dein gay. Masla hal ho jaye ga."
+    },
+    {
+        "instruction": "User claiming false advertising in English",
+        "input": "The ad said backlit keyboard, but this model doesn't have it.",
+        "output": "Sir, please press 'Fn + Spacebar'. If it still doesn't light up, we might have sent the wrong variant. We will exchange it."
+    },
+    {
+        "instruction": "User angry about microphone in Roman Urdu",
+        "input": "Mic mein shor aa raha hai, aglay banday ko awaz nahi ja rahi.",
+        "output": "Sir drivers update kar ke dekh lein. Agar hardware fault hua to warranty mein cover hoga, aap claim kar saktay hain."
+    },
+    {
+        "instruction": "User upset about heavy scratches in Mixed Language",
+        "input": "Back cover pura scratch hua para hai. Ye gift dena tha kisi ko, ab kaise dun?",
+        "output": "Sir maazrat, aap skin/sticker lagwa lein hum uske paisay pay kar detay hain. Ya phir wapis bhej dein exchange ke liye."
+    },
+    {
+        "instruction": "User accusing of delaying tactics in Roman Urdu",
+        "input": "Bahanay mat banao, seedha batao wapis karna hai ya nahi?",
+        "output": "Sir bahanay nahi bana rahay, procedure follow kar rahay hain. Aap item bhejen, check hotay hi payment wapis ho jaye gi."
+    },
+    {
+        "instruction": "User complaining about screen flickering in English",
+        "input": "The screen flickers when I move the lid. Loose connection?",
+        "output": "Yes sir, it seems like a loose display cable. It's a minor fix. We can guide you or you can send it back for repair."
+    },
+    {
+        "instruction": "User angry about missing drivers in Mixed Language",
+        "input": "Bluetooth chal hi nahi raha, kya faida itnay mehangay laptop ka?",
+        "output": "Sir window nayi hoti hai to drivers karnay partay hain. TeamViewer dein, hum abhi remote access pe theek kar detay hain."
+    },
+    {
+        "instruction": "User demanding return shipping fees in Roman Urdu",
+        "input": "Wapis bhejnay ka kharcha mein kyun dun? Ghalti tumhari hai.",
+        "output": "Sir agar cheez kharab nikli hai to delivery charges hum bear karein gay. Aap receipt share kar dijiyega."
+    },
+    {
+        "instruction": "User upset about blocked ports in English",
+        "input": "The USB ports are rusty and not working.",
+        "output": "Sir, that shouldn't happen. Try cleaning them with a brush. If they are dead, we will replace the motherboard or the unit."
+    },
+    {
+        "instruction": "User complaining about weight in Mixed Language",
+        "input": "Ye to bohot bhaari hai, mujh se nahi uthaya jata. Slim wala bola tha.",
+        "output": "Sir ye workstation laptop hai, thora heavy hota hai performance ke liye. Agar apko slim chahiye to exchange kar ke ultrabook le lein."
+    },
+    {
+        "instruction": "User angry about no response on WhatsApp in Roman Urdu",
+        "input": "WhatsApp pe seen kar ke reply nahi kartay, banda banda phans jata hai tum se le ke.",
+        "output": "Sir load bohot zyada hai messages ka. Aap gussa na karein, batayen kya update chahiye apko?"
+    },
+    {
+        "instruction": "User claiming battery drains in sleep mode in English",
+        "input": "Battery drops to 0% overnight even when shut down.",
+        "output": "Sir, fast startup feature might be draining it. We can guide you to disable it. If the battery is weak, we will provide a replacement."
+    },
+    {
+        "instruction": "User upset about touch not working in Mixed Language",
+        "input": "Touch screen kaam nahi kar rahi boss. Driver bhi kar liye.",
+        "output": "Sir phir ye hardware fault ho sakta hai. Aap kindly claim form fill karein, hum pickup arrange karwatay hain."
+    },
+    {
+        "instruction": "User angry about dirty laptop in Roman Urdu",
+        "input": "Kam az kam saaf kar ke to bhejte, mitti lagi hui hai keyboard mein.",
+        "output": "Sir extremely sorry, dispatch team ne ghalti ki. Aap kindly saaf kar lein, hum next order pe shipping free kar dein gay maazrat ke tor pe."
+    },
+    {
+        "instruction": "User complaining about wrong processor generation in Mixed Language",
+        "input": "Ye 6th gen hai, tum ne 7th gen ke paise liye hain. Wapis karo difference.",
+        "output": "Sir properties check karein, model number likha hoga. Agar waqai 6th hai to hum difference amount wapis kar detay hain."
+    },
+    {
+        "instruction": "User demanding immediate exchange in English",
+        "input": "I need a replacement by tomorrow morning, I have a presentation.",
+        "output": "Sir, we will try our best. If you are in the same city, we can use Bykea/Careem delivery for instant exchange."
+    },
+    {
+        "instruction": "User angry about broken charger port in Roman Urdu",
+        "input": "Pin lag hi nahi rahi charging port mein, tooti hui hai andar se.",
+        "output": "Sir ye shipping damage lag raha hai. Aap zor mat lagayen, wapis bhej dein hum port change karwa dein gay."
+    },
+    {
+        "instruction": "User complaining about smell in Mixed Language",
+        "input": "Laptop se jalnay ki boo aa rahi hai jab on karta hoon.",
+        "output": "Sir foran band kar dein! Use na karein. Short circuit ho sakta hai. Hum replace kar ke dein gay."
+    },
+    {
+        "instruction": "User claiming device is slow in Roman Urdu",
+        "input": "Is se tez to mera purana laptop tha. SSD lagayi bhi hai ya jhoot bola?",
+        "output": "Sir SSD hi lagi hai. Virus ho sakta hai. Antivirus scan karein ya windows dobara kar ke dekh lein."
+    },
+    {
+        "instruction": "User angry about fan always running in English",
+        "input": "The fan is spinning at max speed constantly, it's very annoying.",
+        "output": "Sir, this might be a BIOS setting issue. We can guide you to reset BIOS defaults. It should resolve the noise."
+    },
+    {
+        "instruction": "User upset about touchpad issues in Mixed Language",
+        "input": "Touchpad kabhi chalta hai kabhi ruk jata hai. Ajeeb scene hai.",
+        "output": "Sir driver conflict ho sakta hai. Mouse laga kar check karein. Agar hardware issue hua to warranty claim ho jaye gi."
+    },
+    {
+        "instruction": "User complaining about dull screen in Roman Urdu",
+        "input": "Screen bohot kaali hai, full brightness pe bhi nazar nahi aa raha.",
+        "output": "Sir ye anti-glare display hai, thora dull hota hai aankhon ki hifazat ke liye. Agar fault lag raha hai to compare kar ke dekh lein."
+    },
+    {
+        "instruction": "User angry about fake review suspicion in English",
+        "input": "I think all your reviews are fake. This product is garbage.",
+        "output": "Sir, our reviews are from genuine customers. We are sorry you had a bad experience. Let us fix it for you to change your mind."
+    },
+    {
+        "instruction": "User demanding compensation for time waste in Mixed Language",
+        "input": "Mera time zaya hua hai, aana jana para courier office. Iska kaun zimmedar hai?",
+        "output": "Sir hum maazrat khwah hain pareshani ke liye. Hum apko next purchase par special discount coupon de saktay hain."
+    },
+    {
+        "instruction": "User angry about receiving wrong brand in Roman Urdu",
+        "input": "Dell mangwaya tha, HP bhej diya. Ankhain band thin pack karte waqt?",
+        "output": "Sir inventory mix-up ho gaya hoga, insani ghalti hai. Aap tension na lein, hum apne kharche pe replace karein gay."
+    },
+    {
+        "instruction": "User upset about bloated battery in English",
+        "input": "The trackpad is lifted, I think the battery is swollen.",
+        "output": "Sir, please stop using it immediately, it can be dangerous. Send it back, and we will replace the battery free of cost."
+    },
+    {
+        "instruction": "User complaining about slow boot time in Mixed Language",
+        "input": "On honay mein 2 minute laga raha hai. SSD ka kya faida hua?",
+        "output": "Sir startup apps disable karein task manager se. Boot time 15 seconds hona chahiye. Hum check karwa letay hain."
+    },
+    {
+        "instruction": "User angry about payment verification in Roman Urdu",
+        "input": "Screenshot bhej diya hai phir bhi baar baar pooch rahe ho paisay kahan hain.",
+        "output": "Sir accounts team verify karti hai, us mein thora time lagta hai fake slips se bachnay ke liye. Confirm ho gaya hai, aaj dispatch ho jaye ga."
+    },
+    {
+        "instruction": "User complaining about incompatible software in English",
+        "input": "AutoCAD is crashing on this device. You said it's good for designing.",
+        "output": "Sir, for heavy AutoCAD use, you need a workstation with a quadro card. This is a business laptop. We can upgrade you if you pay the difference."
+    },
+    {
+        "instruction": "User upset about rubber feet missing in Mixed Language",
+        "input": "Neechay se rubber feet gayab hain, table pe slip ho raha hai.",
+        "output": "Sir used laptops mein aksar ye gir jatay hain. Hum apko rubber feet mail kar detay hain, aap glue se laga lijiyega."
+    },
+    {
+        "instruction": "User angry about warranty card missing in Roman Urdu",
+        "input": "Warranty card nahi nikla dabbe se. Kal ko mukar gaye to?",
+        "output": "Sir humari invoice hi warranty card hoti hai. Aap bill sambhal kar rakhein, system mein record majood hai."
+    },
+    {
+        "instruction": "User demanding return after 15 days in English",
+        "input": "I was out of city, I checked it today and it's not working. I need a return.",
+        "output": "Sir, warranty is for 15 days. If you informed us late, we can offer repair service but exchange might not be possible. Let me check with the manager."
+    },
+    {
+        "instruction": "User complaining about weak hinges in Mixed Language",
+        "input": "Screen hilti rehti hai type karte waqt. Hinge farigh hain.",
+        "output": "Sir ye loose hinges ka masla hai. Tight ho jayen gay. Aap pareshan na hon, warranty mein cover kar dein gay."
+    },
+    {
+        "instruction": "User angry about data loss in Roman Urdu",
+        "input": "Tumhari wajah se meri window corrupt hui, data urr gaya sara.",
+        "output": "Sir software ki zimmedari humari nahi hoti, hardware ki hoti hai. Data loss par hum maazrat hi kar saktay hain."
+    },
+    {
+        "instruction": "User upset about noisy hard drive in English",
+        "input": "The hard drive is making a grinding noise.",
+        "output": "Sir, that is a sign of drive failure. Please backup your data immediately and send the laptop for a drive replacement."
+    },
+    {
+        "instruction": "User complaining about sticky keys in Mixed Language",
+        "input": "Keyboard pe chai giri hui lag rahi hai, button chipak rahay hain.",
+        "output": "Sir cleaning mein kami reh gayi hogi. Agar keyboard wash se theek na hua to hum naya laga dein gay."
+    },
+    {
+        "instruction": "User angry about incorrect RAM frequency in Roman Urdu",
+        "input": "DDR4 boli thi, DDR3 nikli hai. Ye to purana maal hai.",
+        "output": "Sir model ke hisab se jo support karta hai wohi lagayi hai. Agar ghalti se DDR3 lag gayi to hum upgrade kar dein gay."
+    },
+    {
+        "instruction": "User demanding senior staff in Mixed Language (Rude)",
+        "input": "Tumhe kuch pata nahi hai, kisi senior banday se baat karao.",
+        "output": "Sir mein senior sales executive hi hoon. Aap gussa thanda karein aur masla batayen, hal nikal ayega."
+    },
+    {
+        "instruction": "User upset about poor packaging in English",
+        "input": "The box was crushed when it arrived. Very poor packaging.",
+        "output": "Sir, we use bubble wrap and fragile tape. Courier mishandling is unfortunate. Is the laptop inside safe?"
+    },
+    {
+        "instruction": "User angry about dead pixels in Roman Urdu",
+        "input": "Screen ke beech mein safed dhabba hai. Ye defective hai.",
+        "output": "Sir ye white spot pressure ki wajah se hota hai. Agar bohot prominent hai to hum screen change kar dein gay."
+    },
+    {
+        "instruction": "User complaining about microphone volume in Mixed Language",
+        "input": "Mic ki awaz bohot slow hai, moon ke paas rakhna parta hai.",
+        "output": "Sir settings mein ja kar microphone boost increase karein. Masla hal ho jaye ga."
+    },
+    {
+        "instruction": "User threatening consumer court in English",
+        "input": "I will drag you to consumer court if you don't refund my money.",
+        "output": "Sir, there is no need for that. We are a reputable business and will abide by our warranty policy. We are processing your request."
+    },
+    {
+        "instruction": "User angry about adapter heating up in Roman Urdu",
+        "input": "Charger itna garam ho raha hai ke haath nahi lagaya ja raha.",
+        "output": "Sir original chargers garam hotay hain jab laptop charge ho raha ho. Agar smell aye ya sparks hon to use mat karein."
+    },
+    {
+        "instruction": "User upset about scratches on top lid in Mixed Language",
+        "input": "Top pe scratches hain jo sticker laga ke chupaye huay thay.",
+        "output": "Sir used laptops mein scratches hotay hain is liye hum skin laga detay hain free mein. Ye defect nahi count hota."
+    },
+    {
+        "instruction": "User claiming device shuts down randomly in English",
+        "input": "It turns off automatically every 30 minutes.",
+        "output": "Sir, this could be an overheating issue or a battery fault. We need to diagnose it at the lab. Please send it back."
+    },
+    {
+        "instruction": "User angry about not receiving tracking ID in Roman Urdu",
+        "input": "Kal ka bola tha dispatch ka, abhi tak tracking number nahi diya.",
+        "output": "Sir sham ko slips milti hain courier se. Mein abhi picture bana kar WhatsApp karta hoon apko."
+    },
+    {
+        "instruction": "User complaining about heavy bezel in Mixed Language",
+        "input": "Iske border bohot motay hain, ye purana design lag raha hai.",
+        "output": "Sir ye model ki build aisi hi hai sturdy honay ki wajah se. Agar apko bezel-less chahiye to Dell XPS series check karein."
+    },
+    {
+        "instruction": "User upset about faulty USB port in Roman Urdu",
+        "input": "Mouse wali port kaam nahi kar rahi. Baar baar disconnect hota hai.",
+        "output": "Sir port loose ho gayi hogi. Aap doosri port use karein, ya phir repair ke liye bhej dein."
+    },
+    {
+        "instruction": "User demanding compensation for travel in English",
+        "input": "I drove 20km to pick this up and it's faulty. Who pays for my gas?",
+        "output": "Sir, we apologize for the hassle. While we can't reimburse fuel, we can offer you a premium laptop bag as a goodwill gesture."
+    },
+    {
+        "instruction": "User angry about wrong OS installed in Mixed Language",
+        "input": "Windows 10 boli thi, Windows 7 kar ke bhej di. Ye kaun use karta hai ab?",
+        "output": "Sir shayad technician ne ghalti se old image kar di. Aap online update kar lein, free hai. Ya hum USB bhej detay hain bootable."
+    },
+    {
+        "instruction": "User complaining about camera shutter in Roman Urdu",
+        "input": "Camera ka shutter phansa hua hai, khul nahi raha.",
+        "output": "Sir thora zor laga kar slide karein, kabhi kabhi jam ho jata hai. Tute ga nahi, befikar rahein."
+    },
+    {
+        "instruction": "User claiming sound is distorted in English",
+        "input": "Audio is distorted at full volume.",
+        "output": "Sir, laptop speakers are small. Try keeping volume at 80%. If it cracks at low volume too, then speakers are blown."
+    },
+    {
+        "instruction": "User upset about scratched screen in Mixed Language",
+        "input": "Screen pe baal barabar scratch hai, mujhe bilkul saaf chahiye thi.",
+        "output": "Sir used mein 100% zero meter milna mushkil hota hai. Phir bhi hum koshish kartay hain ke best piece dhoond kar exchange kar dein."
+    },
+    {
+        "instruction": "User angry about missing power cord in Roman Urdu",
+        "input": "Charger to hai lekin bijli wali cable nahi hai dabbe mein.",
+        "output": "Sir wo box ke neechay check karein. Agar nahi mili to hum EasyPaisa kar detay hain 200 rupay, aap kareebi shop se le lein."
+    },
+    {
+        "instruction": "User complaining about Bluetooth range in English",
+        "input": "Bluetooth disconnects if I move 2 meters away.",
+        "output": "Sir, check if the WiFi antenna wires are connected properly to the card inside. We can guide you to check, or you can visit us."
+    },
+    {
+        "instruction": "User angry about confusing return policy in Mixed Language",
+        "input": "Tumhari policy samajh nahi aa rahi, kabhi kehte ho 7 din, kabhi 15 din.",
+        "output": "Sir simple hai: 7 din cash back agar fault ho, aur 15 din warranty repair/exchange ke liye. Koi confusion nahi."
+    },
+    {
+        "instruction": "User demanding immediate refund processing in Roman Urdu",
+        "input": "Mere paisay abhi wapis bhejo, mujhe wait nahi karna.",
+        "output": "Sir system process hai, approval leni parti hai. Shaam tak transfer ho jayen gay, thora sabar karein."
+    },
+    {
+        "instruction": "User upset about dusty ports in English",
+        "input": "The ports are full of dust, looks like it was lying in a warehouse for years.",
+        "output": "Sir, these are imported lots. We clean the exterior, but sometimes ports get missed. A little compressed air will fix it."
+    },
+    {
+        "instruction": "User complaining about key travel in Mixed Language",
+        "input": "Keyboard ke button bohot hard hain press karnay mein.",
+        "output": "Sir business series ke keyboards thore firm hotay hain durability ke liye. Kuch din use karein, aadat ho jaye gi."
+    },
+    {
+        "instruction": "User angry about incorrect invoice amount in Roman Urdu",
+        "input": "Bill pe zyada paise likhe hain, deal kam mein hui thi.",
+        "output": "Sir wo GST add hua hoga system generated bill mein. Aap ne jo pay kiya hai wohi final tha, bill ko ignore karein."
+    },
+    {
+        "instruction": "User threatening to return courier in English",
+        "input": "If the rider asks for extra money, I will send the parcel back.",
+        "output": "Sir, please don't return it. Call us while the rider is there, we will talk to him and settle the issue."
+    },
+    {
+        "instruction": "User upset about wrong hard drive size in Mixed Language",
+        "input": "500GB boli thi, 256GB nikli hai. Ye fraud hai.",
+        "output": "Sir Partition check karein, shayad doosri drive show nahi ho rahi. Disk Management mein ja kar dekhein."
+    },
+    {
+        "instruction": "User angry about laptop smell in Roman Urdu",
+        "input": "Laptop se cigarette ki boo aa rahi hai. Ye kisi smoker ka tha?",
+        "output": "Sir warehouse mein rakha stock hota hai. Aap thora perfume laga lein kapray pe aur saaf karein, smell chali jaye gi."
+    },
+    {
+        "instruction": "User complaining about generic driver issues in English",
+        "input": "Brightness keys are not working. You didn't install drivers properly.",
+        "output": "Sir, Windows updates sometimes overwrite hotkey drivers. Please download the 'HotKey Support' driver from the official website."
+    },
+    {
+        "instruction": "User upset about rude staff behavior in Mixed Language",
+        "input": "Tumhare sales walay ladkay ko baat karne ki tameez nahi hai.",
+        "output": "Sir hum muafi chahtay hain. Hum staff ki training pe ghaur karein gay. Aap batayen kya shikayat hai?"
+    },
+    {
+        "instruction": "User angry about failed delivery attempt in Roman Urdu",
+        "input": "Rider ne jhoot bola ke ghar pe koi nahi tha. Mein pura din ghar tha.",
+        "output": "Sir ye couriers walay aksar aisa kartay hain jab time kam ho. Mein complaint karta hoon, kal pakka deliver hoga."
+    },
+    {
+        "instruction": "User demanding exchange with higher model in English",
+        "input": "I don't like this one. I want to upgrade to the i7 model.",
+        "output": "Sure sir, that is possible. You will just have to pay the price difference. Send this one back to us safely."
+    },
+    {
+        "instruction": "User complaining about scratched logo in Mixed Language",
+        "input": "Bahar se logo scratch hai, bura lag raha hai.",
+        "output": "Sir used maal mein cosmetic issues hotay hain thore bohot. Performance 100% hogi, uski guarantee hai."
+    },
+    {
+        "instruction": "User angry about system hanging in Roman Urdu",
+        "input": "Laptop baar baar hang ho raha hai. Is mein virus hai.",
+        "output": "Sir windows fresh install karein. Agar phir bhi hang ho to RAM ya Hard disk ka masla ho sakta hai, hum check kar lein gay."
+    },
+    {
+        "instruction": "User concluding angry conversation in Mixed Language",
+        "input": "Theek hai bhej raha hoon wapis. Agar ab masla hua to dekhna.",
+        "output": "Jee sir, befikar ho kar bhejen. InshAllah ab shikayat ka mauqa nahi mile ga. Shukriya."
+    },
+    {
+        "instruction": "User asking about laptop for freelancing (Upwork/Fiverr) in Mixed Language",
+        "input": "Boss mein Upwork pe video editing karta hoon, mujhe rendering ke liye koi heavy machine chahiye.",
+        "output": "Sir phir aap normal laptop na lein, Mobile Workstation lein jaise HP ZBook ya Dell Precision. Un mein Nvidia Quadro card hota hai jo rendering fast karta hai."
+    },
+    {
+        "instruction": "User asking about battery backup due to load shedding in Roman Urdu",
+        "input": "Yahan light bohot jati hai, mujhe kam az kam 5 ghantay battery chahiye. Jhoot na bolna.",
+        "output": "Sir agar light ka masla hai to aap double battery wala model lein, jaise Lenovo T480. Us mein bridge battery system hai, 6 ghantay aaram se nikalay ga."
+    },
+    {
+        "instruction": "User asking to install games (GTA V) in Mixed Language",
+        "input": "Yaar is mein GTA 5 aur PUBG install kar ke bhejna, phir deal done hai.",
+        "output": "Sir hum games install nahi kartay, wo apko khud karni paren gi. Hum sirf Windows aur basic drivers complete kar ke detay hain."
+    },
+    {
+        "instruction": "User asking about JazzCash/EasyPaisa payment in Roman Urdu",
+        "input": "Bank account nahi hai mera, JazzCash ya EasyPaisa number hai to bhejo.",
+        "output": "Jee sir, EasyPaisa available hai. Aap 0300-XXXXXXX par Hashir Farooq ke naam par bhej saktay hain."
+    },
+    {
+        "instruction": "User asking if the laptop can run VS Code/Programming tools in English",
+        "input": "I am a CS student. Will this run Android Studio and VS Code smoothly?",
+        "output": "Yes sir, for Android Studio we recommend at least 16GB RAM. This model has 16GB, so it will handle compilation and emulators perfectly."
+    },
+    {
+        "instruction": "User asking about 'Dubai Import' myth in Roman Urdu",
+        "input": "Ye Dubai ka maal hai ya UK/USA ka? Dubai walay jaldi kharab hotay hain.",
+        "output": "Sir ye direct USA import hai. Dubai ka stock aksar refurbished hota hai, hum sirf original USA lot uthatay hain quality maintain karnay ke liye."
+    },
+    {
+        "instruction": "User asking about keyboard lights for night work in Mixed Language",
+        "input": "Raat ko kaam karta hoon, backlit keyboard hai na is mein?",
+        "output": "Jee sir, White Backlit hai. Raat ko type karnay mein koi masla nahi hoga, brightness adjust bhi hoti hai."
+    },
+    {
+        "instruction": "User asking for laptop bag quality in Roman Urdu",
+        "input": "Saath jo bag dogay wo achi quality ka dena, phata hua na ho.",
+        "output": "Sir hum high quality padded bag detay hain ta ke laptop safe rahay. Aap befikar rahein, quality cheez mile gi."
+    },
+    {
+        "instruction": "User asking about upgrading an old purchase in Mixed Language",
+        "input": "6 maheenay pehlay liya tha tum se laptop, ab upgrade kar ke naya lena hai. Exchange hoga?",
+        "output": "Jee sir, hum apne customers ko upgrade policy detay hain. Aap laptop le ayen, hum current value laga kar naya model de dein gay."
+    },
+    {
+        "instruction": "User asking regarding SIM support in laptops in Roman Urdu",
+        "input": "Is mein sim dalti hai? Gaon mein wifi nahi hota.",
+        "output": "Jee sir, is model mein 4G LTE card laga hua hai. Aap data sim daal kar internet chala saktay hain."
+    },
+    {
+        "instruction": "User asking about heating in Pakistani summer in English",
+        "input": "Will it overheat in summer? Use without AC is frequent.",
+        "output": "Sir, metal body laptops can get warm. I suggest getting a cooling pad with it if you plan to use it without AC in heavy summers."
+    },
+    {
+        "instruction": "User asking for a gift for someone else in Roman Urdu",
+        "input": "Mene betay ko gift dena hai matric pass karnay par, koi saaf suthra piece dikhao.",
+        "output": "MashaAllah sir. Aap HP EliteBook G6 dekh lein, look mein bohot slim aur stylish hai, bache ko pasand aye ga."
+    },
+    {
+        "instruction": "User asking about hinge durability in Mixed Language",
+        "input": "Iske hinge to nahi toot jayen gay? Dell mein ye masla ata hai.",
+        "output": "Sir Dell ke puranay models mein masla tha. Ye 7490 series hai, iska hinge design change hai, bohot sturdy hai."
+    },
+    {
+        "instruction": "User asking to reserve for salary date in Roman Urdu",
+        "input": "Bhai 1 tareekh ko tankhwa mile gi, tab tak ye piece hold kar lo.",
+        "output": "Sir 1 tareekh mein bohot time hai. Agar aap 2000 token laga dein to hum side pe rakh dein gay, warna sale ho sakta hai."
+    },
+    {
+        "instruction": "User asking about Adobe Photoshop performance in English",
+        "input": "I need to run Photoshop and Illustrator mainly. Is the screen color accurate?",
+        "output": "Sir, this model has a 100% sRGB IPS panel, which is perfect for graphic designing. Colors accurate ayen gay."
+    },
+    {
+        "instruction": "User asking about cash handling at bus station in Roman Urdu",
+        "input": "Mein doosray sheher se hoon, adda (bus terminal) par delivery ho jaye gi?",
+        "output": "Sir bus adday par risk hota hai tootnay ka. Hum TCS/Leopards prefer kartay hain jo safe home delivery kartay hain."
+    },
+    {
+        "instruction": "User asking about camera shutter for privacy in Mixed Language",
+        "input": "Is mein wo camera chupane wala button (shutter) hai?",
+        "output": "Jee sir, is model mein privacy shutter built-in hai. Aap camera physical band kar saktay hain."
+    },
+    {
+        "instruction": "User asking about SSD vs HDD difference in Roman Urdu",
+        "input": "Ye SSD ka kya faida hai? Hard disk kyun nahi?",
+        "output": "Sir SSD hard disk se 10 guna tez hoti hai. Laptop on honay mein sirf 10 second lagata hai. Ab hard disk ka zamana gaya."
+    },
+    {
+        "instruction": "User asking about Zoom/Teams background blur support in English",
+        "input": "Does the camera support background blur for Zoom meetings?",
+        "output": "That depends on the software sir, but this laptop has an i5 8th gen processor which supports all AI features of Zoom and Teams perfectly."
+    },
+    {
+        "instruction": "User asking about 'Chaska Party' (Time wasters) in Roman Urdu (Implicit)",
+        "input": "Bas pics bhej do, lenay ka mood bana to bataunga.",
+        "output": "Sir aap pics dekh lein. Jab final mood ban jaye to bata dijiyega, stock limited hota hai."
+    },
+    {
+        "instruction": "User asking about cleaning the laptop in Mixed Language",
+        "input": "Screen gandi ho jaye to kis cheez se saaf karun?",
+        "output": "Sir pani mat lagayen. Glass cleaner thora sa kapray pe laga kar saaf karein, direct screen pe spray na karein."
+    },
+    {
+        "instruction": "User asking about installing Windows 11 in Roman Urdu",
+        "input": "Is pe Windows 11 chal jaye gi ya 10 hi chalay gi?",
+        "output": "Sir ye 8th generation hai, is par official Windows 11 update support hai. Aap aaram se chala saktay hain."
+    },
+    {
+        "instruction": "User asking about touch screen utility in English",
+        "input": "Is touch screen actually useful or just a gimmick?",
+        "output": "Sir, if you do reading or scrolling, it's very useful. But for coding or typing, non-touch is better because it consumes less battery."
+    },
+    {
+        "instruction": "User asking about bulk order for office in Mixed Language",
+        "input": "Humari company ko 10 laptops chahiye staff ke liye, quotation mil jaye gi?",
+        "output": "Jee sir, corporate orders ke liye hum special discount aur invoice provide kartay hain. Aap requirements WhatsApp karein."
+    },
+    {
+        "instruction": "User asking about numpad requirement in Roman Urdu",
+        "input": "Side pe ginti wala keyboard (numpad) hai? Accounts ka kaam hai mera.",
+        "output": "Nahi sir, ye 14 inch laptop hai. Numpad ke liye apko 15.6 inch screen wala model lena paray ga."
+    },
+    {
+        "instruction": "User asking if price includes delivery in Mixed Language",
+        "input": "25000 mein delivery shamil hai ya alag se deni hogi?",
+        "output": "Sir 25000 laptop ki price hai, delivery charges 500 rupees alag hon gay."
+    },
+    {
+        "instruction": "User asking about thermal paste in English",
+        "input": "Has the thermal paste been changed recently?",
+        "output": "Yes sir, part of our QC process includes cleaning fans and applying fresh thermal paste for better cooling."
+    },
+    {
+        "instruction": "User asking about hidden faults in Roman Urdu",
+        "input": "Sach batana koi repairing to nahi hui vi board mein?",
+        "output": "Sir board repair wala maal hum bechtay hi nahi. Agar khula hua bhi nikla to aap wapis kar dena. Guarantee hai."
+    },
+    {
+        "instruction": "User asking for specific charger type (Type-C) in Mixed Language",
+        "input": "Ye Type-C se charge hota hai ya purani pin hai?",
+        "output": "Sir ye modern model hai, ye Type-C aur normal pin dono se charge ho jata hai (Thunderbolt support)."
+    },
+    {
+        "instruction": "User asking regarding exchange with a phone in Roman Urdu",
+        "input": "Mera iPhone X le lo aur laptop de do, deal karo gay?",
+        "output": "Sorry sir, hum sirf laptops exchange kartay hain. Mobile phones ki dealing nahi kartay."
+    },
+    {
+        "instruction": "User asking about screen brightness (Nits) in English",
+        "input": "How many nits is the display? I work outdoors.",
+        "output": "Sir, this is the 400 nits variant. It is bright enough to be used outdoors in daylight."
+    },
+    {
+        "instruction": "User asking about rubber coating issue (Sticky) in Roman Urdu",
+        "input": "ThinkPad ki body chipchip to nahi kar rahi? Puranay walo mein hota tha.",
+        "output": "Nahi sir, wo puranay rubber coating walay models thay. Ye fiber body hai, is mein stickiness ka issue nahi ata."
+    },
+    {
+        "instruction": "User asking about watching Netflix (Screen quality) in Mixed Language",
+        "input": "Netflix dekhne ke liye screen ke colors achay hain?",
+        "output": "Behtareen hain sir. Full HD IPS display hai, movies enjoy karein gay aap."
+    },
+    {
+        "instruction": "User asking about installing Antivirus in Roman Urdu",
+        "input": "Antivirus daal kar dena, virus aa jata hai USB se.",
+        "output": "Sir Windows 10/11 ka apna Defender bohot strong hai, alag antivirus ki zaroorat nahi parti. Wo system slow kar deta hai."
+    },
+    {
+        "instruction": "User asking for a localized discount (Student card) in English",
+        "input": "Do you offer discounts for university students if I show my ID?",
+        "output": "Yes, show us your student ID card and we will give you a special student discount or a free accessory."
+    },
+    {
+        "instruction": "User asking about checking parcel before payment (Open delivery) in Roman Urdu",
+        "input": "Courier wala kholne de ga parcel paise dene se pehle?",
+        "output": "Sir courier policy allow nahi karti open delivery. Lekin aap payment kar ke rider ke samnay khol lein, video bana lein."
+    },
+    {
+        "instruction": "User asking about rugged usage (Field work) in Mixed Language",
+        "input": "Mera field ka kaam hai, laptop girta rehta hai. Koi mazboot cheez dikhao.",
+        "output": "Sir phir aap Panasonic Toughbook ya Dell Latitude Rugged series lein. Wo girnay se nahi toot'tay."
+    },
+    {
+        "instruction": "User asking about speaker volume for movies in Roman Urdu",
+        "input": "Awaz oonchi hai? Alag speaker to nahi lagane paren gay?",
+        "output": "Sir laptop ki awaz room ke liye kafi hai, lekin agar apko cinema experience chahiye to Bluetooth speaker connect karna paray ga."
+    },
+    {
+        "instruction": "User asking about bios password in English",
+        "input": "Is the BIOS locked? I need to enable virtualization.",
+        "output": "No sir, BIOS is unlocked. You can easily enable virtualization (VT-x) for your virtual machines."
+    },
+    {
+        "instruction": "User asking about upgrading processor (Impossible request) in Mixed Language",
+        "input": "Iska processor i5 se i7 ho jaye ga?",
+        "output": "Sir laptop ka processor fix hota hai, wo change nahi ho sakta. Sirf RAM aur Hard Disk upgrade ho sakti hai."
+    },
+    {
+        "instruction": "User asking about Golden/Fancy colors in Roman Urdu",
+        "input": "Black ke ilawa koi aur rang hai? Golden ya Silver?",
+        "output": "Sir ThinkPad sirf black ata hai. Agar Silver chahiye to HP EliteBook dekh lein, wo metallic body mein hai."
+    },
+    {
+        "instruction": "User asking about getting scammed previously in Mixed Language",
+        "input": "Pehlay bhi online mangwaya tha eent (brick) nikli thi. Darr lagta hai.",
+        "output": "Sir wo fraud sellers hotay hain. Humari physical shop hai Hafeez Center mein, aap video call kar ke cheez dekh lein tasalli ke liye."
+    },
+    {
+        "instruction": "User asking about battery health percentage in English",
+        "input": "What is the battery health percentage in BIOS?",
+        "output": "Sir, we ensure all units have 'Excellent' battery health in BIOS (above 80% capacity)."
+    },
+    {
+        "instruction": "User asking about connecting to TV (HDMI) in Roman Urdu",
+        "input": "Ye TV ke sath connect ho jaye ga HDMI se?",
+        "output": "Jee bilkul sir, is mein full HDMI port majood hai. Aap projector ya TV se connect kar saktay hain."
+    },
+    {
+        "instruction": "User asking about carrying heavy software (AutoCAD) in Mixed Language",
+        "input": "Civil engineering ka student hoon, AutoCAD aur Revit heavy files chalanay hain.",
+        "output": "Sir phir aap 'H' series processor wala laptop lein (High Performance). 'U' series processor slow ho jaye ga heavy files par."
+    },
+    {
+        "instruction": "User asking about fan cleaning in Roman Urdu",
+        "input": "Agar garam hua to saaf karwa ke do gay?",
+        "output": "Sir dispatch se pehlay service hoti hai. Phir bhi agar apko lagay ke garam ho raha hai to hum dobara service kar dein gay."
+    },
+    {
+        "instruction": "User asking about payment via crypto (Binance) in English",
+        "input": "Do you accept USDT/Binance pay?",
+        "output": "Sorry sir, crypto payments are not regulated in Pakistan. We only accept Bank Transfer or Cash."
+    },
+    {
+        "instruction": "User asking about carbon fiber body in Mixed Language",
+        "input": "Ye plastic body hai ya carbon fiber?",
+        "output": "Sir ye Carbon Fiber material hai, halka bhi hai aur mazboot bhi. Plastic walay sastay hotay hain."
+    },
+    {
+        "instruction": "User asking for final closing in Roman Urdu (Positive)",
+        "input": "Chalo done karo, account number bhejo, kal subah paisay lagwa dunga.",
+        "output": "Jee theek hai sir, details bhej di hain. Payment ka screenshot share kar dijiyega. Shukriya!"
+    },
+    {
+        "instruction": "User asking about urgent same-day delivery in Lahore in Mixed Language",
+        "input": "Lahore mein hoon, aaj shaam tak mil jaye ga? Bykea karwa do.",
+        "output": "Jee sir Lahore mein same day delivery available hai. Aap location bhejen, hum Bykea ride book karwa detay hain (charges customer pay kare ga)."
+    },
+    {
+        "instruction": "User asking about SadaPay/NayaPay in Roman Urdu",
+        "input": "SadaPay se payment ho jaye gi? Bank app down hai meri.",
+        "output": "Jee sir, SadaPay aur NayaPay dono accept kartay hain hum. Aap instant transfer kar dein."
+    },
+    {
+        "instruction": "User asking about keyboard layout (Japanese/English) in Mixed Language",
+        "input": "Iska keyboard English hai ya wo Japanese wala hai jis pe ajeeb symbol hotay hain?",
+        "output": "Sir ye US English layout hai. Hum Japanese keyboard walay units import nahi kartay kyunke wo typing mein tang kartay hain."
+    },
+    {
+        "instruction": "User asking about dedicated VRAM for architecture in English",
+        "input": "I am an architecture student using Lumion. How much VRAM does this have?",
+        "output": "Sir, for Lumion you need at least 4GB VRAM. I recommend the ZBook G5 with Nvidia Quadro P2000, this normal laptop won't handle it."
+    },
+    {
+        "instruction": "User asking about 'Container' condition in Roman Urdu",
+        "input": "Ye container ka maal hai ya local chala hua?",
+        "output": "Sir ye direct container stock hai, Pakistan mein use nahi hua. Aap keyboard aur ports ki condition dekh kar khud samajh jayen gay."
+    },
+    {
+        "instruction": "User asking about battery health percentage check in Mixed Language",
+        "input": "Battery health kitni hai percentage mein? Software pe check kar ke batao.",
+        "output": "Sir software pe 85% se ooper show kar raha hai. Hum 80% se neeche wali battery sale nahi kartay."
+    },
+    {
+        "instruction": "User asking about screen resolution (FHD vs 4K) in English",
+        "input": "Is the display 1080p or 4K? I need sharp text.",
+        "output": "This particular unit is FHD (1080p), sir. 4K displays consume too much battery, so we mostly stock FHD for better backup."
+    },
+    {
+        "instruction": "User asking about COD in a village area in Roman Urdu",
+        "input": "Mera gaon Sialkot se thora aagay hai, wahan TCS ata hai?",
+        "output": "Sir agar TCS wahan deliver karta hai to ho jaye ga. Agar nahi, to apko kareebi TCS center se self-collect karna paray ga."
+    },
+    {
+        "instruction": "User asking about Blue Screen of Death (BSOD) fear in Mixed Language",
+        "input": "Boss agar neela screen (Blue Dump) aa gaya lene ke baad to wapis hoga?",
+        "output": "Jee sir, Blue Screen hardware failure (RAM/Disk) ki nishani hoti hai. Agar aisa hua to warranty mein fix ya exchange hoga."
+    },
+    {
+        "instruction": "User asking about upgrading to Windows 11 Pro in English",
+        "input": "Does it come with Windows 11 Home or Pro?",
+        "output": "It comes with Windows 10 Pro digital license, sir. You can upgrade to Windows 11 Pro for free."
+    },
+    {
+        "instruction": "User asking about webcam privacy shutter in Roman Urdu",
+        "input": "Camera ke aagay wo band karne wala dhakkan hai?",
+        "output": "Jee sir, is model (ThinkPad T490) mein 'ThinkShutter' majood hai privacy ke liye."
+    },
+    {
+        "instruction": "User asking about RAM bus speed in Mixed Language",
+        "input": "RAM ki speed kya hai? 2400MHz hai ya 2666MHz?",
+        "output": "Sir is mein 2666MHz ki DDR4 RAM lagi hui hai, jo multitasking ke liye fast hai."
+    },
+    {
+        "instruction": "User asking for discount on accessories in Roman Urdu",
+        "input": "Laptop ke sath mouse aur handsfree free de do, bache khush ho jayen gay.",
+        "output": "Sir mouse hum free detay hain, handsfree available nahi hoti. Aap ke liye mouse pad extra add kar deta hoon."
+    },
+    {
+        "instruction": "User asking about hinge tightness (common issue) in English",
+        "input": "Are the hinges loose? I hate when the screen wobbles.",
+        "output": "Sir, we check hinge tension on every unit. This one is perfectly tight and holds the angle firmly."
+    },
+    {
+        "instruction": "User asking about delivery damage responsibility in Mixed Language",
+        "input": "Agar raastay mein toot gaya to zimmedar kaun hoga? TCS walay to maantay nahi.",
+        "output": "Sir hum insurance ke sath bhejte hain. Agar toota hua mila to hum zimmedar hain, apko naya piece mile ga."
+    },
+    {
+        "instruction": "User asking about metal vs plastic body in Roman Urdu",
+        "input": "Ye lohay ki body hai ya plastic hai? Toot to nahi jaye ga?",
+        "output": "Sir ye Aluminum alloy body hai (Metal), girnay se toota nahi hai. Plastic walay sastay hotay hain, ye premium hai."
+    },
+    {
+        "instruction": "User asking about PUBG emulator performance in Mixed Language",
+        "input": "Tencent emulator pe PUBG lag to nahi kare gi 60 FPS pe?",
+        "output": "Sir 60 FPS ke liye graphic card zaroori hai. Is laptop mein integrated graphics hain, ye 30-40 FPS de ga. Smooth game ke liye gaming laptop lein."
+    },
+    {
+        "instruction": "User asking about checking specs on arrival in Roman Urdu",
+        "input": "Jab rider aye ga to mein chala ke specs check karunga phir paise dunga.",
+        "output": "Sir courier rider allow nahi karta. Aap payment kar ke receive karein, phir video bana kar check karein. Trust rakhein."
+    },
+    {
+        "instruction": "User asking about specific port (Thunderbolt) in English",
+        "input": "Do I get a Thunderbolt 3 port for connecting an eGPU?",
+        "output": "Yes sir, this model features a Thunderbolt 3 port via USB-C, so you can connect an external GPU dock."
+    },
+    {
+        "instruction": "User asking about Urdu keyboard stickers in Mixed Language",
+        "input": "Keyboard pe Urdu haroof likhay huay hain? Ammi ne use karna hai.",
+        "output": "Sir keyboard English hota hai, lekin hum Urdu stickers ka packet sath bhej dein gay jo aap chipka saktay hain."
+    },
+    {
+        "instruction": "User asking about heating while charging in Roman Urdu",
+        "input": "Charge pe laga ke use karun to garam to nahi hoga?",
+        "output": "Sir thora warm hona normal hai, lekin agar haath na lagaya jaye itna garam ho to batayega. Heavy use pe cooling pad use karein."
+    },
+    {
+        "instruction": "User asking about return shipping cost in English",
+        "input": "If I return it, do I have to pay for shipping?",
+        "output": "If the product is faulty, we pay shipping. If you just didn't like the design (Change of Mind), you pay shipping."
+    },
+    {
+        "instruction": "User asking about Mic quality for Call Center in Mixed Language",
+        "input": "Mein call center ka kaam karta hoon, mic noise cancellation wala hai?",
+        "output": "Sir laptop ka mic basic hota hai. Professional calls ke liye mein suggest karunga aap USB headset use karein."
+    },
+    {
+        "instruction": "User asking about expanding storage later in Roman Urdu",
+        "input": "Abhi 256GB theek hai, baad mein 1TB lag jaye gi?",
+        "output": "Jee sir bilkul, baad mein aap jab chahein upgrade karwa saktay hain. Storage expandable hai."
+    },
+    {
+        "instruction": "User asking about minor scratches (Grade B) in English",
+        "input": "I am okay with scratches if the price is lower. Do you have Grade B stock?",
+        "output": "Yes sir, we have some units with minor dents on the lid for 5000 PKR less. Performance is 100% perfect."
+    },
+    {
+        "instruction": "User asking about shop visit on Sunday in Mixed Language",
+        "input": "Itwar ko chutti hoti hai ya aa jaun?",
+        "output": "Sir Itwar (Sunday) ko Hafeez Center band hota hai. Aap Monday to Saturday 12 bajay se 9 bajay tak tashreef layein."
+    },
+    {
+        "instruction": "User asking about installments via Credit Card (Alfa/Bank Alfalah) in Roman Urdu",
+        "input": "Alfalah ke credit card pe qistain ho jayen gi?",
+        "output": "Jee sir, shop par machine majood hai. Bank Alfalah ke card par 3 se 12 mahinay ki installments ho sakti hain."
+    },
+    {
+        "instruction": "User asking about 'Original' Windows in English",
+        "input": "Is the Windows original or cracked?",
+        "output": "It is an original OEM digital license tied to the motherboard, sir. Not a cracked version."
+    },
+    {
+        "instruction": "User asking about screen size preference in Mixed Language",
+        "input": "Mujhe chota laptop chahiye bag mein rakhne ke liye, 12 inch wala.",
+        "output": "Sir phir aap Dell Latitude 7280 ya 7290 dekhein. Wo 12.5 inch mein bohot handy aur lightweight hain."
+    },
+    {
+        "instruction": "User asking about swapping charger pin type in Roman Urdu",
+        "input": "Mujhe moti pin wala charger nahi chahiye, Type-C wala charger de do sath.",
+        "output": "Sir is model ke sath ata hi Type-C hai. Hum original 65W Type-C adapter hi dein gay."
+    },
+    {
+        "instruction": "User asking about data transfer from old laptop in English",
+        "input": "Can you transfer data from my old laptop if I bring it?",
+        "output": "Yes sir, bring your old laptop. We will transfer your data to the new one free of cost."
+    },
+    {
+        "instruction": "User asking about buying without SSD (Custom config) in Mixed Language",
+        "input": "Bina hard disk ke mil jaye ga? Mere paas apni SSD pari hai.",
+        "output": "Jee sir mil jaye ga, hum hard disk ki price minus kar dein gay. Aap apni SSD shop aa kar lagwa lein."
+    },
+    {
+        "instruction": "User asking about speaker grills blockage in Roman Urdu",
+        "input": "Iske speaker neechay hain ya upar? Neechay walay ki awaz dab jati hai.",
+        "output": "Sir is model (HP EliteBook) ke speakers keyboard ke upar hain (Front facing), awaz clear aye gi."
+    },
+    {
+        "instruction": "User asking about quantity discount for academy in English",
+        "input": "I need 5 laptops for my coding academy. Give me the best dealer price.",
+        "output": "Sir for 5 units, we will give you a flat 2000 PKR discount per unit and free installation of coding tools."
+    },
+    {
+        "instruction": "User asking about 'China' vs 'Original' battery in Mixed Language",
+        "input": "Battery original hai ya China wali copy daali hai?",
+        "output": "Sir stock ke sath jo ayi hai wo hi hai (Genuine). China wali battery hum use nahi kartay, wo jaldi phool jati hai."
+    },
+    {
+        "instruction": "User asking about TrackPoint (Red dot) usage in Roman Urdu",
+        "input": "Ye keyboard ke beech mein lal button (TrackPoint) kis liye hai?",
+        "output": "Sir ye ThinkPad ki pehchan hai, ye mouse ka kaam karta hai ta ke typing karte waqt haath uthana na paray."
+    },
+    {
+        "instruction": "User asking about connecting two monitors in English",
+        "input": "Can I connect two external monitors to this laptop?",
+        "output": "Yes, one via HDMI and one via the Type-C port. You can run a dual-monitor setup easily."
+    },
+    {
+        "instruction": "User asking about gloss vs matte screen in Mixed Language",
+        "input": "Screen shishay wali (Glossy) hai ya saadi (Matte)?",
+        "output": "Sir ye Matte (Anti-glare) screen hai. Is pe reflection nahi parti, aankhon ke liye behtar hai."
+    },
+    {
+        "instruction": "User asking about PTA tax on Laptops (Confusion) in Roman Urdu",
+        "input": "Laptop ka PTA tax to pay nahi karna parta phones ki tarah?",
+        "output": "Nahi sir, laptops par koi PTA tax nahi hota. Ye sim walay models par bhi tax free hotay hain, bas sim chala lein."
+    },
+    {
+        "instruction": "User asking about specific processor series (U vs H vs HQ) in English",
+        "input": "Is this the 'U' series processor or 'HQ'? I need raw power.",
+        "output": "This is the 'U' series (Ultra-low power), designed for battery efficiency. For raw power, please check our 'H' series Gaming stock."
+    },
+    {
+        "instruction": "User asking about delivery to Northern Areas (Gilgit/Skardu) in Mixed Language",
+        "input": "Gilgit delivery hai? Wahan aksar couriers nahi atay.",
+        "output": "Sir Gilgit ke liye hum M&P courier use kartay hain, wo deliver kartay hain lekin time 5-7 din lag sakta hai."
+    },
+    {
+        "instruction": "User asking about fan cleaning frequency in Roman Urdu",
+        "input": "Iska pankha saaf karwana parta hai har maheenay?",
+        "output": "Har maheenay nahi sir, saal mein aik baar service karwa lein kafi hai ta ke heat na karay."
+    },
+    {
+        "instruction": "User asking about testing check warranty period in English",
+        "input": "Is the warranty 7 days or 1 month?",
+        "output": "Standard check warranty is 15 days, sir. You can extend it to 1 month by paying 1000 PKR extra."
+    },
+    {
+        "instruction": "User asking about installing Linux/Ubuntu in Mixed Language",
+        "input": "Mujhe Windows nahi chahiye, Ubuntu kar ke dogay?",
+        "output": "Jee sir, hum Ubuntu install kar saktay hain. Order confirm karte waqt bata dijiyega."
+    },
+    {
+        "instruction": "User asking about buzzing sound in adapter in Roman Urdu",
+        "input": "Charger kan ke paas rakho to 'zeee zeee' ki awaz ati hai.",
+        "output": "Sir ye coil whine hai, normal hai. Lekin agar charger bohot garam ho raha hai to hum change kar dein gay."
+    },
+    {
+        "instruction": "User asking about accidental damage warranty in English",
+        "input": "Does warranty cover if I drop it by mistake?",
+        "output": "No sir, warranty covers internal hardware faults only. Physical damage (screen break, dents) is not covered."
+    },
+    {
+        "instruction": "User asking about glowing logo (Apple style) in Mixed Language",
+        "input": "Peechay logo light deta hai Apple ki tarah?",
+        "output": "Nahi sir, naye models mein logo light khatam kar di hai company ne battery bachanay ke liye. Ye chrome finish logo hai."
+    },
+    {
+        "instruction": "User asking about exchange policy time limit in Roman Urdu",
+        "input": "Agar pasand na aya to kitne din mein wapis kar sakta hoon?",
+        "output": "Sir 7 din ke andar exchange ho sakta hai agar koi valid reason ho. Cash wapis nahi hota change of mind par."
+    },
+    {
+        "instruction": "User asking about student laptop scheme (Government) in Mixed Language",
+        "input": "Ye Shahbaz Sharif laptop scheme wala to nahi hai?",
+        "output": "Nahi sir, wo government property hotay hain, bechna jurm hai. Ye humara private import kiya hua stock hai."
+    },
+    {
+        "instruction": "User asking about invoice for office reimbursement in English",
+        "input": "I need a proper stamped invoice to claim from my office.",
+        "output": "Yes sir, we provide a printed invoice with our shop stamp and signature for office claims."
+    },
+    {
+        "instruction": "User asking about final closing in Roman Urdu",
+        "input": "Chalo pack kar do, lekin ahtiyat se bhejna tootay na.",
+        "output": "Befikar rahein sir, hum bubble wrap ki 4 layers lagatay hain. InshAllah cheez mehfooz aye gi. Shukriya order ke liye!"
+    },
+    {
+        "instruction": "User asking about HDMI to VGA converter in Mixed Language",
+        "input": "Boss mere projector ki cable neeli wali (VGA) hai, is laptop mein to port hi nahi hai.",
+        "output": "Sir naye slim laptops mein VGA port nahi hoti. Hum apko HDMI to VGA converter de dein gay, kaam chal jaye ga."
+    },
+    {
+        "instruction": "User asking about 4K video playback in Roman Urdu",
+        "input": "Is pe 4K movies atak atak ke to nahi chalengi?",
+        "output": "Nahi sir, iska processor 4K decoding support karta hai. VLC player par 4K movies makhan chalengi."
+    },
+    {
+        "instruction": "User asking about laptop for medical studies in English",
+        "input": "I am a medical student, I just need to view PDFs and slides. Suggest something cheap.",
+        "output": "Sir, you don't need high specs. A Surface Pro 4 or a Dell Latitude 7280 would be perfect for reading and carrying around."
+    },
+    {
+        "instruction": "User asking about removing scratches (Buffing) in Roman Urdu",
+        "input": "Ye scratches saaf ho jayen gay? Buffing ho jati hai?",
+        "output": "Sir metal body par buffing nahi hoti, wo paint kharab kar deti hai. Behtar hai aap skin (sticker) lagwa lein."
+    },
+    {
+        "instruction": "User asking about keyboard backlight color in Mixed Language",
+        "input": "Is mein RGB keyboard hai ya sirf white light hai?",
+        "output": "Sir ye gaming laptop nahi hai, ye professional series hai. Is mein sirf white backlit keyboard ata hai."
+    },
+    {
+        "instruction": "User asking about buying a docking station in English",
+        "input": "Do you sell the docking station for this ThinkPad?",
+        "output": "Yes sir, we have original Type-C docking stations available for 5000 PKR extra."
+    },
+    {
+        "instruction": "User asking about fingerprint driver in Roman Urdu",
+        "input": "Fingerprint kaam nahi kar raha, driver kahan se lun?",
+        "output": "Sir Windows update chalayen, wo khud utha le gi. Agar na ho to Dell ki website se download kar lein."
+    },
+    {
+        "instruction": "User asking about battery swelling risk in Mixed Language",
+        "input": "Suna hai patlay laptop ki battery phool jati hai jaldi?",
+        "output": "Sir agar aap har waqt charge pe laga ke rakhein gay to phool sakti hai. 100% honay par charger utaar diya karein."
+    },
+    {
+        "instruction": "User asking about cash payment at shop in Roman Urdu",
+        "input": "Dukan pe aa ke cash dun ga, card nahi hai.",
+        "output": "Jee sir, shop par cash bilkul qabool hai. Aap aa jayen."
+    },
+    {
+        "instruction": "User asking about RAM type (DDR3 vs DDR4) in English",
+        "input": "Is this DDR3L or DDR4? I need faster memory.",
+        "output": "This model is equipped with DDR4 RAM, sir. It is significantly faster and more power-efficient than DDR3."
+    },
+    {
+        "instruction": "User asking about 'Dot' on screen (Dead pixel) in Mixed Language",
+        "input": "Screen pe aik kala dot hai jo ja nahi raha. Ye kya hai?",
+        "output": "Sir ye dead pixel hai. Agar ye barh nahi raha to masla nahi, lekin agar apko bura lag raha hai to hum screen change kar saktay hain."
+    },
+    {
+        "instruction": "User asking about pre-installed games list in Roman Urdu",
+        "input": "Kaun kaun si games pehlay se hain is mein?",
+        "output": "Sir hum games install nahi kartay. Laptop bilkul fresh window ke sath aye ga, games apko khud karni hongi."
+    },
+    {
+        "instruction": "User asking about using laptop on bed (Overheating) in English",
+        "input": "Can I use it on my bed or quilt?",
+        "output": "Sir, never place it directly on a quilt as it blocks air vents. Always use a hard surface or a laptop tray to prevent overheating."
+    },
+    {
+        "instruction": "User asking about exchange with desktop PC in Roman Urdu",
+        "input": "Mera gaming PC le lo aur ye laptop de do.",
+        "output": "Sorry sir, hum sirf laptops mein deal kartay hain. PC exchange ki policy nahi hai."
+    },
+    {
+        "instruction": "User asking about installing Zoom in Mixed Language",
+        "input": "Zoom aur Teams install kar ke dena, mujhse nahi hota.",
+        "output": "Jee sir, hum basic software package (Zoom, Chrome, VLC) install kar ke hi bhejte hain."
+    },
+    {
+        "instruction": "User asking about delivery to obscure village in Roman Urdu",
+        "input": "Mera gaon bohot andar hai, wahan TCS wala nahi ata. Kya karun?",
+        "output": "Sir phir aap apne qareebi sheher ke TCS office ka address de dein, wahan se 'Self Collect' kar lijiye ga."
+    },
+    {
+        "instruction": "User asking about returning if parents don't like it in Mixed Language",
+        "input": "Agar abbu ko pasand na aya to wapis le logay?",
+        "output": "Sir wapis nahi hoga, lekin hum doosray model ke sath exchange kar dein gay agar condition kharab na hui ho."
+    },
+    {
+        "instruction": "User asking about heavy charger weight in English",
+        "input": "Is the charger very heavy? I travel a lot.",
+        "output": "No sir, this model comes with a slim travel adapter. It fits easily in any bag."
+    },
+    {
+        "instruction": "User asking about 'Wholesale' definition in Roman Urdu",
+        "input": "Wholesale ka kya matlab hai? Aik piece nahi mile ga?",
+        "output": "Sir wholesale ka matlab hai hum dealer price par aik piece bhi de detay hain. Market se 2-3 hazaar kam hi mile ga."
+    },
+    {
+        "instruction": "User asking about laptop age in Mixed Language",
+        "input": "Ye kitna purana use hua wa hai? 5 saal?",
+        "output": "Sir ye corporate lease wala maal hota hai, taqreeban 2-3 saal office mein use hua hota hai. Condition fresh hoti hai."
+    },
+    {
+        "instruction": "User asking about upgrading WiFi card in English",
+        "input": "Does it support WiFi 6 or do I need to upgrade the card?",
+        "output": "This model has WiFi 5 (AC). You can upgrade to an Intel AX200 card for WiFi 6 support if you want."
+    },
+    {
+        "instruction": "User asking about screen size confusion (14 vs 15.6) in Roman Urdu",
+        "input": "Ye 14 inch chota to nahi lage ga? Mujhe movies dekhni hain.",
+        "output": "Sir 14 inch standard size hai, bohot chota nahi hota. Lekin agar apko bari screen pasand hai to 15.6 inch wala lein."
+    },
+    {
+        "instruction": "User asking about payment via Raast ID in Mixed Language",
+        "input": "Raast ID hai to bhejo, instant payment karta hoon.",
+        "output": "Jee sir, Raast ID humara phone number hi hai. Aap us par bhej kar screenshot share karein."
+    },
+    {
+        "instruction": "User asking about closing lid action in English",
+        "input": "When I close the lid, it shuts down. Can you fix this?",
+        "output": "Sir, that's a Windows setting. Go to Power Options and change 'Lid close action' to 'Sleep' or 'Do nothing'."
+    },
+    {
+        "instruction": "User asking about keyboard noise in Roman Urdu",
+        "input": "Typing karte waqt tik tik ki awaz to nahi ati?",
+        "output": "Sir thori awaz to ati hai mechanical keys ki, lekin ye bohot soft touch hai. Shor nahi machata."
+    },
+    {
+        "instruction": "User asking about hard disk health (Sentinel) in Mixed Language",
+        "input": "Sentinel pe health 100% hai hard disk ki?",
+        "output": "Jee sir, hum Hard Disk Sentinel se check kar ke bhejte hain. 100% health aur 100% performance hogi."
+    },
+    {
+        "instruction": "User asking about getting a box with used laptop in Roman Urdu",
+        "input": "Iska dabba mile ga? Mujhe gift dena hai.",
+        "output": "Sir used laptops khulay atay hain, lekin hum apko ek naya brown laptop box de dein gay packing ke liye."
+    },
+    {
+        "instruction": "User asking about availability of parts later in English",
+        "input": "Will spare parts be available if it breaks after 2 years?",
+        "output": "Yes sir, this is a very popular model (Dell 5400). Its parts like screen, battery, and keyboard are easily available in the market."
+    },
+    {
+        "instruction": "User asking about 'Generation' scam in Mixed Language",
+        "input": "Kuch log sticker badal ke generation change kar dete hain, tum to aisa nahi karte?",
+        "output": "Sir hum BIOS check karwatay hain. Sticker pe mat jayen, system ki properties mein jo likha hai wo sach hai."
+    },
+    {
+        "instruction": "User asking about audio jack (Combo vs Separate) in Roman Urdu",
+        "input": "Is mein handsfree aur mic ki alag pin lagti hai ya aik hi hai?",
+        "output": "Sir ye combo jack hai (mobile jaisa). Aik hi pin mein mic aur audio dono chal jayen gay."
+    },
+    {
+        "instruction": "User asking about negotiation on delivery charges in Mixed Language",
+        "input": "Delivery free kar do yaar, laptop itna mehanga le raha hoon.",
+        "output": "Sir profit margin bohot kam hai wholesale price par. Delivery charges courier company leti hai, wo hum pay nahi kar saktay."
+    },
+    {
+        "instruction": "User asking about webcam quality for visa interview in English",
+        "input": "I have an online visa interview. Is the camera clear enough?",
+        "output": "The camera is decent (720p), sir. But for a visa interview, good lighting is more important. In good light, it is very clear."
+    },
+    {
+        "instruction": "User asking about protecting laptop from dust in Roman Urdu",
+        "input": "Yahan mitti bohot hai, isko kaise bachaun?",
+        "output": "Sir aap silicone keyboard cover aur screen protector lagwa lein. Aur use ke baad bag mein rakha karein."
+    },
+    {
+        "instruction": "User asking about exchanging faulty charger in Mixed Language",
+        "input": "Charger kharab nikla to wapis ho jaye ga?",
+        "output": "Jee sir, charger ki bhi 15 din ki warranty hoti hai. Agar kaam na kare to hum change kar dein gay."
+    },
+    {
+        "instruction": "User asking about viewing angle (IPS) in Roman Urdu",
+        "input": "Side se dekhne pe screen kaali to nahi hoti?",
+        "output": "Nahi sir, ye IPS panel hai. Aap jis marzi angle se dekhein, colors wese hi rahein gay."
+    },
+    {
+        "instruction": "User asking about upgrading graphics card in English",
+        "input": "Can I put a GTX 1050 inside this laptop?",
+        "output": "No sir, laptop graphics cards are soldered to the motherboard and cannot be added or upgraded later."
+    },
+    {
+        "instruction": "User asking about Touch ID setup in Mixed Language",
+        "input": "Fingerprint set kaise karte hain? Option nahi mil raha.",
+        "output": "Sir Settings > Accounts > Sign-in Options mein jayen. Wahan Fingerprint setup ka option hoga, pehlay PIN code lagana paray ga."
+    },
+    {
+        "instruction": "User asking about checking parcel weight in Roman Urdu",
+        "input": "Parcel halka laga to mein receive nahi karunga.",
+        "output": "Sir laptop ka wazan hota hai, khali dabba nahi hoga. Aap rider ke samnay weight feel kar saktay hain."
+    },
+    {
+        "instruction": "User asking about using mouse on glass surface in English",
+        "input": "Will the free mouse work on a glass table?",
+        "output": "The free mouse is a standard optical mouse, sir. It won't work on glass; you will need a mouse pad."
+    },
+    {
+        "instruction": "User asking about 'B-Stock' meaning in Mixed Language",
+        "input": "List mein 'B-Stock' likha hai, iska kya matlab?",
+        "output": "Sir B-Stock ka matlab hai ke us pe thore scratches ya dent hain, lekin chalnay mein bilkul theek hai. Price bhi kam hoti hai."
+    },
+    {
+        "instruction": "User asking about removing admin password in Roman Urdu",
+        "input": "BIOS pe password laga hua hai, hata ke do gay?",
+        "output": "Jee sir, hum BIOS unlocked kar ke detay hain ta ke aap window waghaira khud kar sakein."
+    },
+    {
+        "instruction": "User asking about urgency due to exams in Mixed Language",
+        "input": "Kal exam hai mera, aaj raat tak har haal mein chahiye.",
+        "output": "Sir agar aap Lahore mein hain to Careem bike bhej dein, abhi mangwa lein. TCS se to kal hi aye ga."
+    },
+    {
+        "instruction": "User asking about heavy gaming on integrated graphics in English",
+        "input": "Can I play Cyberpunk 2077 on this Intel HD graphics?",
+        "output": "No sir, absolutely not. Intel HD is for office work. For Cyberpunk, you need a high-end gaming laptop with RTX graphics."
+    },
+    {
+        "instruction": "User asking about Urdu typing support in Roman Urdu",
+        "input": "Is pe Urdu likhi jati hai InPage mein?",
+        "output": "Jee sir, InPage install ho jata hai aur aap Urdu typing aaram se kar saktay hain."
+    },
+    {
+        "instruction": "User asking about refund method (EasyPaisa) in Mixed Language",
+        "input": "Agar wapis kiya to paise EasyPaisa kar dogay?",
+        "output": "Jee sir, jis tareeqay se aap ne pay kiya tha, usi tareeqay se refund mil jaye ga."
+    },
+    {
+        "instruction": "User asking about buying bag separately in English",
+        "input": "Can I buy just the laptop bag? I already have a laptop.",
+        "output": "Yes sir, we sell bags separately too. You can choose from our catalog."
+    },
+    {
+        "instruction": "User asking about broken screen cost estimate in Roman Urdu",
+        "input": "Khuda na khwasta agar screen toot gayi to kitne ki dalay gi?",
+        "output": "Sir is model ki screen taqreeban 8 se 10 hazaar ki range mein mil jati hai market mein."
+    },
+    {
+        "instruction": "User asking about hinge noise in Mixed Language",
+        "input": "Kholtey waqt 'karr karr' ki awaz ati hai.",
+        "output": "Sir ye hinge mein dust ya oil ki kami ho sakti hai. Hum service kar ke bhejte hain, ye issue nahi aye ga."
+    },
+    {
+        "instruction": "User asking about checking specs via DXDIAG in English",
+        "input": "I will run 'dxdiag' to verify specs.",
+        "output": "Sure sir, 'dxdiag' is the best way to verify processor and RAM. We encourage you to check."
+    },
+    {
+        "instruction": "User asking final confirmation with Dua in Roman Urdu",
+        "input": "Chalo Allah barkat dalay, bhej do ye wala.",
+        "output": "Ameen sir. JazakAllah khair. Hum aaj hi process kar detay hain."
+    }
+]

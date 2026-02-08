@@ -73,6 +73,7 @@ async function setupDatabase() {
         description TEXT,
         stock INT DEFAULT 0,
         rating DECIMAL(3, 2) DEFAULT 0,
+        highlights TEXT, -- Added to support your new Product Details page chips
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
       );
@@ -103,7 +104,33 @@ async function setupDatabase() {
       );
     `);
 
-    console.log("✅ SUCCESS: Database and all tables (Users, Addresses, Products, Orders) created!");
+    // 7. Create SITE_SETTINGS Table (NEW)
+    console.log("🔵 Creating 'site_settings' table...");
+    await connection.query(`
+      CREATE TABLE IF NOT EXISTS site_settings (
+        id INT PRIMARY KEY, -- We only use ID 1
+        brand_name VARCHAR(255) DEFAULT 'My Brand',
+        brand_description TEXT,
+        email_address VARCHAR(255),
+        helpline_number VARCHAR(50),
+        whatsapp_number VARCHAR(50),
+        facebook_url TEXT,
+        instagram_url TEXT,
+        tiktok_url TEXT,
+        snapchat_url TEXT,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+      );
+    `);
+
+    // 8. Insert Default Settings Row (NEW)
+    // using INSERT IGNORE so it doesn't fail if the row already exists
+    console.log("🔵 Initializing default site settings...");
+    await connection.query(`
+      INSERT IGNORE INTO site_settings (id, brand_name, brand_description, email_address)
+      VALUES (1, 'My Awesome Brand', 'Quality products delivered fast.', 'support@brand.com');
+    `);
+
+    console.log("✅ SUCCESS: Database and all tables (Users, Addresses, Products, Orders, Settings) created!");
 
   } catch (error) {
     console.error("❌ ERROR:", error.message);

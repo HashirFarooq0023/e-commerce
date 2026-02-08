@@ -54,8 +54,8 @@ export default function TopRatedCarousel({ products = [] }) {
     <div className="top-rated-carousel">
       <div className="carousel-header">
         <div>
-          <h2>⭐ Top Rated Products</h2>
-          <p>Our highest-rated items with perfect 5-star reviews</p>
+          <h2>Top Rated Products</h2>
+
         </div>
         <div className="carousel-indicators">
           {topRatedProducts.map((_, idx) => (
@@ -237,7 +237,7 @@ export default function TopRatedCarousel({ products = [] }) {
           display: flex;
           align-items: center;
           gap: 6px;
-          color: #facc15;
+          color:rgb(199, 164, 22);
           font-weight: 600;
           font-size: 0.9rem;
         }
